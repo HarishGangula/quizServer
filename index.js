@@ -5,7 +5,8 @@ let io = require('socket.io')(http);
 let axios = require('axios');
 let  _ = require('lodash');
 let fs = require('fs');
-var questions = [];
+var  questions;
+var responses;
 var packetId;
 
 app.use('/', express.static(__dirname+'/'))
@@ -17,34 +18,22 @@ io.on('connection', (socket) => {
  
   
   socket.on('start-quiz', (message) => {
-    console.log(message)
-    //get 10 questions include joel question
-    axios.get('https://dev.sunbirded.org/api/content/v1/read/do_112682538715676672114', {
-      params: {
-        fields: "questions"
-      }
-    })
-    .then(function (response) {
-      questions = _.get(response, 'data.result.content.questions')
+      responses = [];
+      questions = JSON.parse(fs.readFileSync('questions.json', 'utf-8'));
       joel = _.find(questions, {"identifier": "do_112682561142702080162"});
       questions = _.shuffle(questions);
       questions = _.takeRight(questions,9);
-      questions.push(joel);
+      questions.unshift(joel);
       questions = _.shuffle(questions);
-      
-    })
-    .catch(function (error) {
-      console.log('Error while getting questions', error);
-    });
-  
-    //store in a var
-    // io.emit('message', {text: message.text, from: socket.nickname, created: new Date()});    
    });
+
+   socket.on('response', function(data){
+     console.log();
+   })
    
    
    socket.on('next-question', (message) => {
-     console.log(questions)
-      socket.emit('question', {data: questions[message.index], next: true}) 
+      socket.emit('question', {data: questions[message.index]}) 
    })
 });
  

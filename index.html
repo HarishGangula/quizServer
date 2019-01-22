@@ -21,12 +21,29 @@
     </div>
 
     <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.showQuestion">
-            <div class="ui icon huge header" >
-               <h1 ng-style="quizController.timerStyle">{{quizController.timer}}</h1> 
-            </div>
+                <h1></h1>
+                <button class="ui right floated massive teal button" style="position: fixed;right: 1em;top: 1em;">{{quizController.quizQuestionTime+1}}</button>
+                <h1 ng-bind-html="questionTitle" style="font-size:2em;"></h1> 
+                <img class="ui centered huge image" src="{{image}}" alt="" ng-if="image">
     </div>
+            <table class="ui huge celled inverted table" ng-show="quizController.showDashboard">
+                    <thead>
+                      <tr><th>Name</th>
+                      <th>Score</th>
+                      <th>Time Taken</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Name">James</td>
+                        <td data-label="Age">24</td>
+                        <td data-label="Job">Engineer</td>
+                      </tr>
+                    </tbody>
+                  </table>
     
+          
     <script src="angular.js"></script>
+    <script src="angular-sanitize.min.js"></script>
     <script src="./node_modules/timer.js/dist/timer.min.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./semantic/semantic.min.css"></script>

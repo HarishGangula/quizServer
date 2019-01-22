@@ -1,0 +1,1644 @@
+[
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "There is only one correct answer to this question. Which answer is this?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>There is only one correct answer to this question. Which answer is this?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Answer A</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Answer A or B</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Answer B or C</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Now you are totally confused</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"There is only one correct answer to this question. Which answer is this?\\n\",\"title\":\"There is only one correct answer to this question. Which answer is this?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:56:27.952+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:56:27.952+0000",
+        "identifier": "do_112682570858110976176",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548165387952",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "There is only one correct answer to this question. Which answer is this?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Some months have 31 days, others have 30 days, but how many have 28 days?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Some months have 31 days, others have 30 days, but how many have 28 days?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>February</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>January</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>All of the month</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>None of the month</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Some months have 31 days, others have 30 days, but how many have 28 days?\\n\",\"title\":\"Some months have 31 days, others have 30 days, but how many have 28 days?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:53:42.743+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:53:42.743+0000",
+        "identifier": "do_112682569504727040174",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548165222743",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Some months have 31 days, others have 30 days, but how many have 28 days?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Which tool, developer feels reluctant to use?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Which tool, developer feels reluctant to use?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>JIRA</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Slack</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Google Sheet/Docs</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Postman</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which tool, developer feels reluctant to use?\\n\",\"title\":\"Which tool, developer feels reluctant to use?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:48:38.676+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:48:38.676+0000",
+        "identifier": "do_112682567013801984170",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164918676",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which tool, developer feels reluctant to use?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Among the various allotropes of carbon\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Among the various allotropes of carbon</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>coke is the hardest, graphite is the softest</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>diamond is the hardest, coke is the softest</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>diamond is the hardest, graphite is the softest</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>diamond is the hardest, lamp black is the softest</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Among the various allotropes of carbon\\n\",\"title\":\"Among the various allotropes of carbon\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:18:02.629+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:18:02.629+0000",
+        "identifier": "do_112682551972904960134",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163082629",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Among the various allotropes of carbon\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Who catch hold of development bugs?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who catch hold of development bugs?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Sunita</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Ayub</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Asha</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Anand Varda</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who catch hold of development bugs?\\n\",\"title\":\"Who catch hold of development bugs?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:44:31.587+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:44:31.587+0000",
+        "identifier": "do_112682564989648896168",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164671587",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who catch hold of development bugs?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Where is world largest railway station by platforms?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Where is world largest railway station by platforms?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Grand Central Terminal, Park Avenue, New York</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Shinjuku Station, Tokyo</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Gare du Nord, Paris&quot;</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Clapham Junction, London</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Where is world largest railway station by platforms?\\n\",\"title\":\"Where is world largest railway station by platforms?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:22:11.947+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:22:11.947+0000",
+        "identifier": "do_112682554015326208145",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163331947",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Where is world largest railway station by platforms?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Who designs the product roadmap?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who designs the product roadmap?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Rahul</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Ayub</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Harish</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Amit P</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who designs the product roadmap?\\n\",\"title\":\"Who designs the product roadmap?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:41:37.896+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:41:37.896+0000",
+        "identifier": "do_112682563566772224166",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164497896",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who designs the product roadmap?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Physics",
+        "evalUnordered": false,
+        "qlevel": "EASY",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "The western ghats in Maharashtra is known as...?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>The western ghats in Maharashtra is known as...?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Nilgiris</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1361\"},{\"text\":\"<p>Sahyadris</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1362\"},{\"text\":\"<p>Cardamon Hills</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1372\"},{\"text\":\"<p>Annamalai</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1377\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"The western ghats in Maharashtra is known as...?\\n\",\"title\":\"The western ghats in Maharashtra is known as...?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"EASY\",\"gradeLevel\":[\"Class 1\",\"Class 3\"],\"subject\":\"Physics\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:10:32.603+0000",
+        "gradeLevel": [
+            "Class 1",
+            "Class 3"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:10:32.603+0000",
+        "identifier": "do_112682548286291968120",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548162632603",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "The western ghats in Maharashtra is known as...?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "A program in execution is called\n\n \n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>A program in execution is called</p>\\n\\n<p>&nbsp;</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Process</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Instruction</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Procedure</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Function</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[{\"id\":218800908,\"src\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"assetId\":\"do_112682559449038848160\",\"type\":\"image\",\"preload\":false},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true}]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"A program in execution is called\\n\\n \\n\",\"title\":\"A program in execution is called\\n\\n \\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[{\"id\":218800908,\"src\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"assetId\":\"do_112682559449038848160\",\"type\":\"image\",\"preload\":false},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true}]}}",
+        "createdOn": "2019-01-22T13:38:01.451+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:38:01.451+0000",
+        "identifier": "do_112682561793662976163",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164281451",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "A program in execution is called\n\n \n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Which among the following is a positively charged particle emitted by a radioactive element?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Which among the following is a positively charged particle emitted by a radioactive element?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Beta ray</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Alpha ray</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Cathode ray</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1602\"},{\"text\":\"<p>Gamma ray</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which among the following is a positively charged particle emitted by a radioactive element?\\n\",\"title\":\"Which among the following is a positively charged particle emitted by a radioactive element?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:13:54.606+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:13:54.606+0000",
+        "identifier": "do_112682549941100544125",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548162834606",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which among the following is a positively charged particle emitted by a radioactive element?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Which among the following bodies estimates the national income of India?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Which among the following bodies estimates the national income of India?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Office of the Economic Advisor</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1153\"},{\"text\":\"<p>Ministry of Statistics</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1154\"},{\"text\":\"<p>Central Statistical Office</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1164\"},{\"text\":\"<p>Ministry of Finance</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1169\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which among the following bodies estimates the national income of India?\\n\",\"title\":\"Which among the following bodies estimates the national income of India?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:07:01.099+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:07:01.099+0000",
+        "identifier": "do_112682546553651200110",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548162421099",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which among the following bodies estimates the national income of India?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "C8H10N4O2 is a molecule dear to the hearts and minds of geeks. What is it?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>C8H10N4O2 is a molecule dear to the hearts and minds of geeks. What is it?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Caffeine</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Semiconductor</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Graphite (Mechanical Pencil Lead)</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Polyester</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"C8H10N4O2 is a molecule dear to the hearts and minds of geeks. What is it?\\n\",\"title\":\"C8H10N4O2 is a molecule dear to the hearts and minds of geeks. What is it?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:55:08.747+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:55:08.747+0000",
+        "identifier": "do_112682570209263616175",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548165308747",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "C8H10N4O2 is a molecule dear to the hearts and minds of geeks. What is it?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Who is the best listener amongst?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who is the best listener amongst?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Madhu</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Joel</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Manzarul</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Vinu</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who is the best listener amongst?\\n\",\"title\":\"Who is the best listener amongst?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:45:24.149+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:45:24.149+0000",
+        "identifier": "do_112682565420244992169",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164724149",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who is the best listener amongst?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Developer are most scared of whom?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Developer are most scared of whom?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Release Manager</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>PMs</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Design Council</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>QA</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Developer are most scared of whom?\\n\",\"title\":\"Developer are most scared of whom?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:52:25.130+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:52:25.130+0000",
+        "identifier": "do_112682568868921344173",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548165145130",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Developer are most scared of whom?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Who follows up religiously on the release date with all the stakeholders ?",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who follows up religiously on the release date with all the stakeholders</p>\\n\\n<p>&nbsp;</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Santhosh V</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Manmeet</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Madhu</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Rayulu</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[{\"id\":218800908,\"src\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"assetId\":\"do_112682559449038848160\",\"type\":\"image\",\"preload\":false},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true}]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who follows up religiously on the release date with all the stakeholders ?\",\"title\":\"Who follows up religiously on the release date with all the stakeholders ?\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[{\"id\":218800908,\"src\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"assetId\":\"do_112682559449038848160\",\"type\":\"image\",\"preload\":false},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true}]}}",
+        "createdOn": "2019-01-22T13:39:28.424+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:39:28.424+0000",
+        "identifier": "do_112682562506137600165",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164368424",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who follows up religiously on the release date with all the stakeholders ?",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "English",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "Hindi",
+        "type": "mcq",
+        "title": "Where do we all gather virtually?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Where do we all gather virtually?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Twitter</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2172\"},{\"text\":\"<p>Slack</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:2173\"},{\"text\":\"<p>Hangouts</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2183\"},{\"text\":\"<p>Facebook</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:2188\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Where do we all gather virtually?\\n\",\"title\":\"Where do we all gather virtually?\\n\",\"medium\":\"Hindi\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"English\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:42:48.441+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:42:48.441+0000",
+        "identifier": "do_112682564144676864167",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164568441",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Where do we all gather virtually?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Which of the following does not belong to Albert Einstein\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Which of the following does not belong to Albert Einstein</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Imagination is more important than knowledge</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Science without religion is lame, religion without science is blind.</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Theory of Gravity</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Theory of Relativity - e=mc^2</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which of the following does not belong to Albert Einstein\\n\",\"title\":\"Which of the following does not belong to Albert Einstein\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:30:35.608+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:30:35.608+0000",
+        "identifier": "do_112682558141308928156",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163835608",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which of the following does not belong to Albert Einstein\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Who is this person ?\n\n \n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who is this person ?</p>\\n\\n<p>&nbsp;</p>\\n\",\"image\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Dwayne Johnson</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Michael Johnson</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Joel Johnson</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Ben Johnson</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[{\"id\":218800908,\"src\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"assetId\":\"do_112682559449038848160\",\"type\":\"image\",\"preload\":false},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true}]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who is this person ?\\n\\n \\n\",\"title\":\"Who is this person ?\\n\\n \\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[{\"id\":218800908,\"src\":\"/assets/public/content/do_112682559449038848160/artifact/joel-johnson_1548163995412.jpg\",\"assetId\":\"do_112682559449038848160\",\"type\":\"image\",\"preload\":false},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.audioicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/audio.png\",\"assetId\":\"org.ekstep.questionset.audioicon\",\"type\":\"image\",\"preload\":true},{\"id\":\"org.ekstep.questionset.default-imgageicon\",\"src\":\"/content-plugins/org.ekstep.questionunit.mcq-1.1/renderer/assets/default-image.png\",\"assetId\":\"org.ekstep.questionset.default-imgageicon\",\"type\":\"image\",\"preload\":true}]}}",
+        "createdOn": "2019-01-22T13:36:41.988+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:36:41.988+0000",
+        "identifier": "do_112682561142702080162",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548164201988",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who is this person ?\n\n \n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Who has won the men’s singles French Open tennis tournament 2018?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who has won the men&rsquo;s singles French Open tennis tournament 2018?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>NovakDjokovic</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>DominicThiem</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>RogerFederer</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Rafael Nadal</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"title\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:25:10.433+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:25:10.433+0000",
+        "identifier": "do_112682555477475328149",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163510433",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who has won the men’s singles French Open tennis tournament 2018?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "World Day for Water is observed on which of the following dates?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>World Day for Water is observed on which of the following dates?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>22 August</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>22 July</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>22 October</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>22 March</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"World Day for Water is observed on which of the following dates?\\n\",\"title\":\"World Day for Water is observed on which of the following dates?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:27:36.650+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:27:36.650+0000",
+        "identifier": "do_112682556675284992153",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163656650",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "World Day for Water is observed on which of the following dates?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Which kind of bulbs were once exchanged as a form of currency?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Which kind of bulbs were once exchanged as a form of currency?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Tulips</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:4219\"},{\"text\":\"<p>Lily</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4220\"},{\"text\":\"<p>Lotus</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4230\"},{\"text\":\"<p>Anemone</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4235\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which kind of bulbs were once exchanged as a form of currency?\\n\",\"title\":\"Which kind of bulbs were once exchanged as a form of currency?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T17:29:39.038+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T17:29:39.038+0000",
+        "identifier": "do_112682675642679296117",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548178179038",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which kind of bulbs were once exchanged as a form of currency?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Who played “Rachel Green’s char in the famous TV series “FRIENDS”\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who played &ldquo;Rachel Green&rsquo;s char in the famous TV series &ldquo;FRIENDS&rdquo;</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Jennifer Winglet</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4219\"},{\"text\":\"<p>Jennifer Aniston</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:4220\"},{\"text\":\"<p>Jennifer Garner</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4230\"},{\"text\":\"<p>Jennifer Lawrence</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4235\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who played “Rachel Green’s char in the famous TV series “FRIENDS”\\n\",\"title\":\"Who played “Rachel Green’s char in the famous TV series “FRIENDS”\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T17:27:30.884+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T17:27:30.884+0000",
+        "identifier": "do_112682674592858112114",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548178050884",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who played “Rachel Green’s char in the famous TV series “FRIENDS”\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "The chemical name of Chloroform is\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>The chemical name of Chloroform is</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Sulphuric acid</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Sodium Chloride</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Sodium Carbonate</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Trichloromethane</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"The chemical name of Chloroform is\\n\",\"title\":\"The chemical name of Chloroform is\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:28:55.560+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:28:55.560+0000",
+        "identifier": "do_112682557321715712154",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163735560",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "The chemical name of Chloroform is\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "In 2011, which country hosted a Formula 1 race for the first time?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>In 2011, which country hosted a Formula 1 race for the first time?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Pakistan</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4219\"},{\"text\":\"<p>Bangaladesh</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4220\"},{\"text\":\"<p>India</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:4230\"},{\"text\":\"<p>China</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4235\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"In 2011, which country hosted a Formula 1 race for the first time?\\n\",\"title\":\"In 2011, which country hosted a Formula 1 race for the first time?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T17:28:39.049+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T17:28:39.049+0000",
+        "identifier": "do_112682675151257600116",
+        "version": 2,
+        "versionKey": "1548178119049",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "In 2011, which country hosted a Formula 1 race for the first time?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "This year we are observing our _____ Republic Day\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>This year we are observing our _____ Republic Day</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>68</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>69</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>65</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>70</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"This year we are observing our _____ Republic Day\\n\",\"title\":\"This year we are observing our _____ Republic Day\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:31:31.405+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:31:31.405+0000",
+        "identifier": "do_112682558598397952158",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163891405",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "This year we are observing our _____ Republic Day\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Is the Great Wall of China really visible from the moon?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Is the Great Wall of China really visible from the moon?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Yes</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4219\"},{\"text\":\"<p>No</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:4220\"},{\"text\":\"<p>Maybe</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4230\"},{\"text\":\"<p>Sometimes</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4235\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Is the Great Wall of China really visible from the moon?\\n\",\"title\":\"Is the Great Wall of China really visible from the moon?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T17:24:55.284+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T17:24:55.284+0000",
+        "identifier": "do_112682673318174720111",
+        "version": 2,
+        "versionKey": "1548177895284",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Is the Great Wall of China really visible from the moon?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Which country’s women cricket team has clinched the Asia Cup Twenty-20 tournament 2018?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Which country&rsquo;s women cricket team has clinched the Asia Cup Twenty-20 tournament 2018?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>SouthKorea</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Bangladesh</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>India</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Pakistan</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which country’s women cricket team has clinched the Asia Cup Twenty-20 tournament 2018?\\n\",\"title\":\"Which country’s women cricket team has clinched the Asia Cup Twenty-20 tournament 2018?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:23:31.754+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:23:31.754+0000",
+        "identifier": "do_112682554669096960147",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548163411754",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which country’s women cricket team has clinched the Asia Cup Twenty-20 tournament 2018?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Where was the fortune cookie actually invented?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Where was the fortune cookie actually invented?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>China</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4219\"},{\"text\":\"<p>America</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:4220\"},{\"text\":\"<p>Japan</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4230\"},{\"text\":\"<p>Australia</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:4235\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Where was the fortune cookie actually invented?\\n\",\"title\":\"Where was the fortune cookie actually invented?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T17:25:52.847+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T17:25:52.847+0000",
+        "identifier": "do_112682673789730816113",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548177952847",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Where was the fortune cookie actually invented?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "data": "{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who has won the men&rsquo;s singles French Open tennis tournament 2018?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Novak Djokovic</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Dominic Thiem</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Roger Federer</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Rafael Nadal</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"title\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Who has won the men’s singles French Open tennis tournament 2018?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who has won the men&rsquo;s singles French Open tennis tournament 2018?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Novak Djokovic</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Dominic Thiem</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Roger Federer</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Rafael Nadal</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Who has won the men&rsquo;s singles French Open tennis tournament 2018?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Novak Djokovic</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Dominic Thiem</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Roger Federer</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Rafael Nadal</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"title\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]},\"medium\":\"English\",\"questionTitle\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"qlevel\":\"DIFFICULT\",\"subject\":\"Tamil\",\"board\":\"CBSE\",\"templateType\":\"Horizontal\",\"isPartialScore\":true,\"gradeLevel\":[\"Class 1\"],\"isShuffleOption\":false,\"evalUnordered\":false,\"max_score\":1,\"name\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"title\":\"Who has won the men’s singles French Open tennis tournament 2018?\\n\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:25:52.356+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T17:37:17.584+0000",
+        "identifier": "do_112682555820908544151",
+        "questionTitle": "Who has won the men’s singles French Open tennis tournament 2018?\n",
+        "topicData": "(0) topics selected",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548178637584",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Who has won the men’s singles French Open tennis tournament 2018?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "'Bar' is the unit of ?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>&#39;Bar&#39; is the unit of ?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Temperature</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Getting High/Heat</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Current</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Atmospheric Pressure</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"'Bar' is the unit of ?\\n\",\"title\":\"'Bar' is the unit of ?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:15:24.991+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:15:24.991+0000",
+        "identifier": "do_112682550681534464128",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548162924991",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "'Bar' is the unit of ?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Tamil",
+        "evalUnordered": false,
+        "qlevel": "DIFFICULT",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Whom does the Indian Constitution permit to take part in the Proceedings of Parliament?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>Whom does the Indian Constitution permit to take part in the Proceedings of Parliament?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Solicitor General</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1591\"},{\"text\":\"<p>Attorney General</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1592\"},{\"text\":\"<p>Cabinet Secretary</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1607\"},{\"text\":\"<p>Chief Justice</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1753\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Whom does the Indian Constitution permit to take part in the Proceedings of Parliament?\\n\",\"title\":\"Whom does the Indian Constitution permit to take part in the Proceedings of Parliament?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"DIFFICULT\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Tamil\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:20:11.377+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:20:11.377+0000",
+        "identifier": "do_112682553027600384137",
+        "version": 2,
+        "versionKey": "1548163211377",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Whom does the Indian Constitution permit to take part in the Proceedings of Parliament?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Physics",
+        "evalUnordered": false,
+        "qlevel": "EASY",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "What is the name of India's first nuclear reactor?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>What is the name of India&#39;s first nuclear reactor?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Cirius</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1361\"},{\"text\":\"<p>Apsara</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1362\"},{\"text\":\"<p>Dhruva</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1372\"},{\"text\":\"<p>Kamini</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1377\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"What is the name of India's first nuclear reactor?\\n\",\"title\":\"What is the name of India's first nuclear reactor?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"EASY\",\"gradeLevel\":[\"Class 1\",\"Class 3\"],\"subject\":\"Physics\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:08:32.938+0000",
+        "gradeLevel": [
+            "Class 1",
+            "Class 3"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:08:32.938+0000",
+        "identifier": "do_112682547305996288114",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548162512938",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "What is the name of India's first nuclear reactor?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Physics",
+        "evalUnordered": false,
+        "qlevel": "EASY",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "Which state is known as India's Spice Garden...?",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>&quot;Which state is known as India&#39;s Spice Garden...?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>Kerala</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:1361\"},{\"text\":\"<p>Karnataka</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1362\"},{\"text\":\"<p>Bihar</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1372\"},{\"text\":\"<p>Uttaranchal</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:1377\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"Which state is known as India's Spice Garden...?\",\"title\":\"Which state is known as India's Spice Garden...?\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"EASY\",\"gradeLevel\":[\"Class 1\",\"Class 3\"],\"subject\":\"Physics\",\"board\":\"CBSE\",\"category\":\"MCQ\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:12:25.467+0000",
+        "gradeLevel": [
+            "Class 1",
+            "Class 3"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:12:25.467+0000",
+        "identifier": "do_112682549210873856121",
+        "consumerId": "9393568c-3a56-47dd-a9a3-34da3c821638",
+        "version": 2,
+        "versionKey": "1548162745467",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "Which state is known as India's Spice Garden...?",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "CBSE",
+        "status": "Live"
+    },
+    {
+        "template": "NA",
+        "templateType": "Horizontal",
+        "isPartialScore": true,
+        "itemType": "UNIT",
+        "code": "NA",
+        "subject": "Geography",
+        "evalUnordered": false,
+        "qlevel": "MEDIUM",
+        "channel": "b00bc992ef25f1a9a8d63291e20efc8d",
+        "language": [
+            "English"
+        ],
+        "medium": "English",
+        "type": "mcq",
+        "title": "World Health day is observed on?\n",
+        "body": "{\"data\":{\"plugin\":{\"id\":\"org.ekstep.questionunit.mcq\",\"version\":\"1.1\",\"templateId\":\"horizontalMCQ\"},\"data\":{\"question\":{\"text\":\"<p>World Health day is observed on?</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\"},\"options\":[{\"text\":\"<p>3rd November</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:871\"},{\"text\":\"<p>3rd April</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"hint\":\"\",\"isCorrect\":true,\"$$hashKey\":\"object:872\"},{\"text\":\"<p>3rd June</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:882\"},{\"text\":\"<p>3rd May</p>\\n\",\"image\":\"\",\"audio\":\"\",\"audioName\":\"\",\"isCorrect\":false,\"$$hashKey\":\"object:887\"}],\"questionCount\":0,\"media\":[]},\"config\":{\"metadata\":{\"max_score\":1,\"isShuffleOption\":false,\"isPartialScore\":true,\"evalUnordered\":false,\"templateType\":\"Horizontal\",\"name\":\"World Health day is observed on?\\n\",\"title\":\"World Health day is observed on?\\n\",\"medium\":\"English\",\"topic\":[],\"qlevel\":\"MEDIUM\",\"gradeLevel\":[\"Class 1\"],\"subject\":\"Geography\",\"board\":\"State (Andhra Pradesh)\",\"category\":\"MCQ\",\"topicData\":\"(0) topics selected\"},\"max_time\":0,\"max_score\":1,\"partial_scoring\":true,\"layout\":\"Horizontal\",\"isShuffleOption\":false,\"questionCount\":1,\"evalUnordered\":false},\"media\":[]}}",
+        "createdOn": "2019-01-22T13:05:10.825+0000",
+        "gradeLevel": [
+            "Class 1"
+        ],
+        "isShuffleOption": false,
+        "appId": "dev.sunbird.portal",
+        "options": [
+            {
+                "answer": true,
+                "value": {
+                    "type": "text",
+                    "asset": "1",
+                    "resvalue": 0,
+                    "resindex": 0
+                }
+            }
+        ],
+        "lastUpdatedOn": "2019-01-22T13:05:10.825+0000",
+        "identifier": "do_11268254565029478418",
+        "topicData": "(0) topics selected",
+        "version": 2,
+        "versionKey": "1548162310825",
+        "framework": "NCF",
+        "createdBy": "159e93d1-da0c-4231-be94-e75b0c226d7c",
+        "max_score": 1,
+        "name": "World Health day is observed on?\n",
+        "template_id": "NA",
+        "category": "MCQ",
+        "board": "State (Andhra Pradesh)",
+        "status": "Live"
+    }
+]
