@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quizApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./semantic/semantic.min.css">
+</head>
+<body  ng-controller="quizAppController as quizController">
+    <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.startQuizFlag">
+        <div class="ui icon header">
+            <i class="question  icon"></i>
+        </div>
+    <div class="ui primary huge button" id="play" ng-click="quizController.start()">START QUIZ</div>
+    </div>
+    <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.startQuizTimer">
+            <div class="ui icon huge header" >
+               <h1 ng-style="quizController.timerStyle">{{quizController.timer}}</h1> 
+            </div>
+    </div>
+
+    <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.showQuestion">
+            <div class="ui icon huge header" >
+               <h1 ng-style="quizController.timerStyle">{{quizController.timer}}</h1> 
+            </div>
+    </div>
+    
+    <script src="angular.js"></script>
+    <script src="./node_modules/timer.js/dist/timer.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./semantic/semantic.min.css"></script>
+    <script src="./script.js"></script>
+    <script src="socket.io.js"></script>
+    <script src="lodash.min.js"></script>
+</body>
+</html>
