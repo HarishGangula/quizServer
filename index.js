@@ -42,12 +42,48 @@ app.get("/nextQuestion/:id", (req, res) => {
 });
 
 app.get("/endQuiz", (req, res) => {
-  // prepare data
-  io.emit("endQuiz", { score: 5 });
+  var users = _.map(responses, "user");
+  users = _.uniqWith(users, _.isEqual);
+  console.log("users ", users);
+  var results = [];
+
+  _.forEach(users, function(user) {
+    var userResult = user;
+    userResult.time = 0;
+    userResult.score = 0;
+    _.forEach(responses, function(response) {
+      if (user.code === response.user.code) {
+        userResult.time = userResult.time + response.option.time;
+        if (response.option.isCorrect) {
+          userResult.score++;
+        }
+      }
+    });
+    userResult.score = (userResult.score / 10) * 100;
+    results.push(userResult);
+  });
+  results = _.orderBy(results, ["score", "time"], ["desc", "asc"]);
+  // users = _.uniqBy(users, "code");
+  // var results = [];
+  // _.forEach(users, function(user) {
+  //   var data = user;
+  //   var userQuiz = userGroup[data.code];
+  //   data.score = 0;
+  //   if (userQuiz && userQuiz.length) {
+  //     data.score = (userQuiz.length / 10) * 100;
+  //   }
+  //   data.time = 0;
+  //   _.forEach(userQuiz, function(q) {
+  //     data.time = data.time + q.option.time;
+  //   });
+  //   results.push(data);
+  // });
+
+  io.emit("endQuiz", { results: results });
+  res.end();
 });
 
 app.post("/userResponse", (req, res) => {
-  console.log(req.body);
   responses.push(req.body);
   res.end();
 });

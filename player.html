@@ -29,25 +29,33 @@
       </div>
     </div>
     <div class="ui huge placeholder segment" style="height: 100vh;">
-      <div class="ui fluid vertical large menu">
-        <a
-          class="item"
-          ng-repeat="option in options"
-          ng-click="selectOption(option)"
-          ng-class="{'active': option === selectedOption }"
-        >
-          <span ng-bind-html="option.text"> </span>
-        </a>
+      <div class="ui active inverted dimmer" ng-show="disableOptionContainer">
+        <div class="ui text loader">{{ loadingMessage }}</div>
       </div>
-      <div class="field">
-        <button
-          class="ui primary button"
-          ng-click="sendResponse()"
-          ng-disabled="!selectedOption"
-        >
-          Submit
-        </button>
+      <div ng-show="!disableOptionContainer">
+        <div class="ui fluid vertical large menu">
+          <a
+            class="item"
+            ng-repeat="option in options"
+            ng-click="selectOption(option)"
+            ng-class="{'active': option === selectedOption }"
+          >
+            <span ng-bind-html="option.text"> </span>
+          </a>
+        </div>
+        <div class="field">
+          <button
+            class="ui primary button"
+            ng-click="sendResponse()"
+            ng-disabled="!selectedOption"
+          >
+            Submit
+          </button>
+        </div>
       </div>
+    </div>
+    <div class="ui info message" ng-show="quizEnded">
+      <div class="header">There were some errors with your submission</div>
     </div>
     <script src="angular.js"></script>
     <script src="angular-sanitize.min.js"></script>
@@ -57,6 +65,7 @@
     <script src="socket.io.js"></script>
     <script src="lodash.min.js"></script>
     <script src="socket.js"></script>
+    <script src="uuid.min.js"></script>
     <script>
       angular
         .module("playerApp", ["ngSanitize"])
@@ -68,16 +77,22 @@
           var questionTimer = null;
           var player = this;
           var socket = io();
+          var userId = uuid();
 
           player.showOptions = false;
           player.showScan = false;
           player.optionsLoader = false;
           $scope.selectedOption = null;
+          $scope.quizEnded = false;
+          $scope.disableOptionContainer = true;
+          $scope.loadingMessage = "Waiting for Quiz to start......";
 
           socket.on("question", function(data) {
             $scope.selectedOption = null;
+            $scope.loadingMessage = "Loading next question........";
             console.log("Question received", data);
             $scope.showOptions = true;
+            $scope.disableOptionContainer = false;
             $scope.options = _.get(
               JSON.parse(_.get(data, "data.body")),
               "data.data.options"
@@ -89,11 +104,16 @@
             // 'https://dev.ekstep.in'
           });
           socket.on("startQuiz", function(data) {
+            $scope.quizEnded = false;
+            $scope.$apply();
             console.log("Starting quiz....", data);
             // 'https://dev.ekstep.in'
           });
           socket.on("endQuiz", function(data) {
+            $scope.quizEnded = true;
             console.log("Ending quiz...", data);
+            $scope.loadingMessage = "Preparing results......";
+            $scope.$apply();
             // 'https://dev.ekstep.in'
           });
 
@@ -103,8 +123,10 @@
           };
           $scope.sendResponse = function() {
             var data = {};
-            data.option = $scope.selectedOption;
-            data.user = { user: 1 };
+            data.option = _.clone($scope.selectedOption);
+            data.option.time = Date.now() - questionTimer;
+            $scope.disableOptionContainer = true;
+            data.user = { code: userId, name: "harish" };
             var settings = {
               async: true,
               crossDomain: true,

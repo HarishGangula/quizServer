@@ -1,11 +1,9 @@
-
-
-
-angular.module('quizApp', ['ngSanitize'])
-  .controller('quizAppController', function($interval, $timeout, $scope) {
+angular
+  .module("quizApp", ["ngSanitize"])
+  .controller("quizAppController", function($interval, $timeout, $scope) {
     var quizController = this;
-    var totalQuestions = 10;
-    var questionTime  = 5;
+    var totalQuestions = 2;
+    var questionTime = 5;
     quizController.currentIndex = 0;
     quizController.startQuizFlag = true;
     quizController.startQuizTimer = false;
@@ -13,110 +11,118 @@ angular.module('quizApp', ['ngSanitize'])
     quizController.showDashboard = false;
 
     quizController.timer = 1;
-    quizController.timerStyle = {'font-size': '200px', 'color': getRandomColor()};
-    
+    quizController.timerStyle = {
+      "font-size": "200px",
+      color: getRandomColor()
+    };
+
     function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    quizController.start = function() {
+      quizController.startQuizFlag = false;
+      quizController.startQuizTimer = true;
+      var timerInterval = $interval(function() {
+        quizController.timer--;
+        var color = getRandomColor();
+        quizController.timerStyle = { "font-size": "200px", color: color };
+
+        if (quizController.timer === 0) {
+          $interval.cancel(timerInterval);
+          timerInterval = undefined;
+          quizController.timerStyle = { "font-size": "100px", color: color };
+          quizController.timer = "Loading Questions......";
+          quizController.startQuizCall();
         }
-        return color;
-    }
-      
-    
+      }, 1000);
+    };
 
-    quizController.start =  function() {
-        quizController.startQuizFlag = false;
-        quizController.startQuizTimer = true;
-        var timerInterval = $interval(function(){
-            quizController.timer--;
-            var color = getRandomColor()
-            quizController.timerStyle = {'font-size': '200px', 'color': color};
-            
-            if(quizController.timer === 0) {
-                 $interval.cancel(timerInterval);  timerInterval = undefined;
-                 quizController.timerStyle = {'font-size': '100px', 'color': color};
-                 quizController.timer = "Loading Questions......"
-                 quizController.startQuizCall()
-            }
-        },1000)
-    }
+    quizController.startQuizCall = function() {
+      quizController.startQuizTimer = false;
+      quizController.showDashboard = false;
+      var settings = {
+        async: true,
+        crossDomain: true,
+        url: "/startQuiz",
+        method: "GET",
+        headers: {
+          "cache-control": "no-cache",
+          "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
+        }
+      };
+      $.ajax(settings).done(function(response) {
+        quizController.currentIndex = 0;
+        quizController.loadQuestion(quizController.currentIndex);
+      });
+    };
 
-    quizController.startQuizCall = function(){
-        quizController.startQuizTimer = false;
-        quizController.showDashboard = false;
+    socket.on("question", function(data) {
+      console.log(data);
+      quizController.showQuestion = true;
+      var question = _.get(
+        JSON.parse(_.get(data, "data.body")),
+        "data.data.question"
+      );
+      $scope.questionTitle = question.text;
+
+      if (question.image) {
+        $scope.image = "https://dev.ekstep.in" + question.image;
+      } else {
+        $scope.image = "";
+      }
+      $scope.$apply();
+      quizController.startQuestionTimer();
+    });
+
+    quizController.loadQuestion = function() {
+      if (quizController.currentIndex <= totalQuestions - 1) {
         var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "/startQuiz",
-            "method": "GET",
-            "headers": {
-              "cache-control": "no-cache",
-              "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
-            }
+          async: true,
+          crossDomain: true,
+          url: "/nextQuestion/" + quizController.currentIndex,
+          method: "GET",
+          headers: {
+            "cache-control": "no-cache",
+            "Postman-Token": "9c93e14f-7f79-4f5b-81fe-b4853b8b7000"
           }
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-            var settings = {
-                "async": true,
-                "url": "/startQuiz",
-                "method": "GET",
-              }
-              quizController.currentIndex = 0
-              $.ajax(settings).done(function (response) {
-                quizController.loadQuestion(quizController.currentIndex)     
-              });
-          });
-    }
+        };
 
-    socket.on('question', function(data){
-        console.log(data)
-        quizController.showQuestion = true;
-        var question = _.get(JSON.parse(_.get(data, 'data.body')), 'data.data.question');
-        $scope.questionTitle = question.text;
-        
-        if(question.image){
-            $scope.image = 'https://dev.ekstep.in'+ question.image;
-        } else {
-            $scope.image = '';
+        $.ajax(settings).done(function(response) {
+          console.log(response);
+        });
+      } else {
+        var settings = {
+          async: true,
+          crossDomain: true,
+          url: "/endQuiz",
+          method: "GET",
+          headers: {
+            "cache-control": "no-cache",
+            "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
+          }
+        };
+        $.ajax(settings).done(function(response) {});
+        quizController.showQuestion = false;
+        quizController.showDashboard = true;
+      }
+    };
+
+    quizController.startQuestionTimer = function() {
+      quizController.quizQuestionTime = questionTime;
+      var timerInterval = $interval(function() {
+        quizController.quizQuestionTime = quizController.quizQuestionTime - 1;
+        if (quizController.quizQuestionTime === 0) {
+          $interval.cancel(timerInterval);
+          timerInterval = undefined;
+          quizController.currentIndex = quizController.currentIndex + 1;
+          quizController.loadQuestion();
         }
-        $scope.$apply();
-        quizController.startQuestionTimer()
-    })
-
-    quizController.loadQuestion = function(){
-            if(quizController.currentIndex <= totalQuestions-1){
-                var settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "http://localhost:3000/nextQuestion/"+quizController.currentIndex,
-                    "method": "GET",
-                    "headers": {
-                      "cache-control": "no-cache",
-                      "Postman-Token": "9c93e14f-7f79-4f5b-81fe-b4853b8b7000"
-                    }
-                  }
-                  
-                  $.ajax(settings).done(function (response) {
-                    console.log(response);
-                  });
-            } else {
-                quizController.showQuestion = false;
-                quizController.showDashboard = true;
-            }
-    }
-
-    quizController.startQuestionTimer = function(){
-        quizController.quizQuestionTime = questionTime;
-        var timerInterval = $interval(function(){
-            quizController.quizQuestionTime = quizController.quizQuestionTime - 1;
-            if(quizController.quizQuestionTime === 0) {
-                $interval.cancel(timerInterval);  timerInterval = undefined;
-                quizController.currentIndex = quizController.currentIndex+1;
-                quizController.loadQuestion()
-            }
-        },1000)
-    }
-
+      }, 1000);
+    };
   });
