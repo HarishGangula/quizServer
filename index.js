@@ -133,7 +133,7 @@ app.use("/get/:id", async (req, res) => {
 });
 
 app.post("/telemetry", function(req, res) {
-  console.log(re.body);
+  console.log(res.body);
   var options = {
     method: "POST",
     url: "http://52.172.188.118:3000/v1/telemetry",
