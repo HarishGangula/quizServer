@@ -85,6 +85,13 @@
         <img src="third.jpg" alt="" ng-if="rank === 3" />
         <img src="last.jpg" alt="" ng-if="rank === 4" />
       </div>
+      <div
+        class="ui button primary huge"
+        ng-show="showResults"
+        ng-click="restartQuiz()"
+      >
+        Start Again
+      </div>
     </div>
 
     <script src="angular.js"></script>
@@ -182,6 +189,10 @@
             $.ajax(settings).done(function(response) {
               console.log(response);
             });
+          };
+
+          $scope.restartQuiz = function() {
+            window.location.replace("/quiz.html");
           };
         });
     </script>
