@@ -1,42 +1,129 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="playerApp">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="./semantic/semantic.min.css">
-</head>
-<body ng-controller="playerAppController as player">
+    <link rel="stylesheet" href="./semantic/semantic.min.css" />
+  </head>
+  <body ng-controller="playerAppController as player">
+    <div
+      class="ui huge segment"
+      style="height: 100vh;"
+      ng-show="player.showScan"
+    >
+      <div class="login-body">
+        <canvas style="width: 100%;" id="canvas"></canvas>
+        <label class="mb-3">( OR )</label>
+        <label class="mb-1 d-block" for="input-QR">Enter QR Code</label>
+        <input name="input-QR" id="qrcode" class="w-100 my-3 py-2" />
+        <button
+          type="button"
+          onclick="verifyQrCode
+                (document.getElementById('qrcode').value)"
+          class="btn btn-primary btn-block mb-3 rounded-0"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+    <div class="ui huge placeholder segment" style="height: 100vh;">
+      <div class="ui fluid vertical large menu">
+        <a
+          class="item"
+          ng-repeat="option in options"
+          ng-click="selectOption(option)"
+          ng-class="{'active': option === selectedOption }"
+        >
+          <span ng-bind-html="option.text"> </span>
+        </a>
+      </div>
+      <div class="field">
+        <button
+          class="ui primary button"
+          ng-click="sendResponse()"
+          ng-disabled="!selectedOption"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.min.js"></script>
+    <script src="./node_modules/timer.js/dist/timer.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./semantic/semantic.min.js"></script>
+    <script src="socket.io.js"></script>
+    <script src="lodash.min.js"></script>
+    <script src="socket.js"></script>
+    <script>
+      angular
+        .module("playerApp", ["ngSanitize"])
+        .controller("playerAppController", function(
+          $interval,
+          $timeout,
+          $scope
+        ) {
+          var questionTimer = null;
+          var player = this;
+          var socket = io();
 
-        <div class="ui huge segment" style="height: 100vh;" ng-show="player.showScan">
-            <div class="login-body">
-                <canvas style="width: 100%;" id="canvas"></canvas>
-                <label class="mb-3">( OR )</label>
-                <label class="mb-1 d-block" for="input-QR">Enter QR Code</label>
-                <input name="input-QR" id="qrcode" class="w-100 my-3 py-2" />
-                <button type="button" onclick="verifyQrCode
-                (document.getElementById('qrcode').value)" class="btn btn-primary btn-block mb-3 rounded-0">Login</button>
-            </div>
-        </div>    
-        <div class="ui huge segment" style="height: 100vh;" ng-show="player.showOptions">
-                <div class="grouped fields">
-                        <div class="field" ng-repeat="option in player.options" >
-                          <div class="ui huge radio checkbox">
-                            <input type="radio" name="option" checked="" tabindex="0" class="hidden">
-                            <label ng-bind-html="option"></label>
-                            <img ng-if="option.image" class="ui tiny image" src="{{'https://dev.ekstep.in' + option.image}}"/>
-                          </div>
-                        </div>
-                </div>
-        </div>
-        <script src="angular.js"></script>
-        <script src="angular-sanitize.min.js"></script>
-        <script src="./node_modules/timer.js/dist/timer.min.js"></script>
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./semantic/semantic.min.js"></script>
-        <script src="socket.io.js"></script>
-        <script src="lodash.min.js"></script>
-        <script src="./player.js"></script>
-</body>
+          player.showOptions = false;
+          player.showScan = false;
+          player.optionsLoader = false;
+          $scope.selectedOption = null;
+
+          socket.on("question", function(data) {
+            $scope.selectedOption = null;
+            console.log("Question received", data);
+            $scope.showOptions = true;
+            $scope.options = _.get(
+              JSON.parse(_.get(data, "data.body")),
+              "data.data.options"
+            );
+            $scope.$apply();
+            $(".ui.radio.checkbox").checkbox();
+            console.log("Question Options", player.options);
+            questionTimer = Date.now();
+            // 'https://dev.ekstep.in'
+          });
+          socket.on("startQuiz", function(data) {
+            console.log("Starting quiz....", data);
+            // 'https://dev.ekstep.in'
+          });
+          socket.on("endQuiz", function(data) {
+            console.log("Ending quiz...", data);
+            // 'https://dev.ekstep.in'
+          });
+
+          $scope.selectOption = function(option) {
+            console.log(option);
+            $scope.selectedOption = option;
+          };
+          $scope.sendResponse = function() {
+            var data = {};
+            data.option = $scope.selectedOption;
+            data.user = { user: 1 };
+            var settings = {
+              async: true,
+              crossDomain: true,
+              url: "/userResponse",
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "cache-control": "no-cache",
+                "Postman-Token": "c36c5931-fbf2-436f-9481-26f3ad9d0b55"
+              },
+              processData: false,
+              data: JSON.stringify(data)
+            };
+
+            $.ajax(settings).done(function(response) {
+              console.log(response);
+            });
+          };
+        });
+    </script>
+  </body>
 </html>

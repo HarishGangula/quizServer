@@ -7,13 +7,12 @@ angular.module('quizApp', ['ngSanitize'])
     var totalQuestions = 10;
     var questionTime  = 5;
     quizController.currentIndex = 0;
-    const socket = io();
     quizController.startQuizFlag = true;
     quizController.startQuizTimer = false;
     quizController.showQuestion = false;
     quizController.showDashboard = false;
 
-    quizController.timer = 10;
+    quizController.timer = 1;
     quizController.timerStyle = {'font-size': '200px', 'color': getRandomColor()};
     
     function getRandomColor() {
@@ -47,16 +46,36 @@ angular.module('quizApp', ['ngSanitize'])
     quizController.startQuizCall = function(){
         quizController.startQuizTimer = false;
         quizController.showDashboard = false;
-        socket.emit('start-quiz', {name: 'harish'});
-        quizController.currentIndex = 0
-        quizController.loadQuestion()
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "/startQuiz",
+            "method": "GET",
+            "headers": {
+              "cache-control": "no-cache",
+              "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
+            }
+          }
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+            var settings = {
+                "async": true,
+                "url": "/startQuiz",
+                "method": "GET",
+              }
+              quizController.currentIndex = 0
+              $.ajax(settings).done(function (response) {
+                quizController.loadQuestion(quizController.currentIndex)     
+              });
+          });
     }
 
     socket.on('question', function(data){
+        console.log(data)
         quizController.showQuestion = true;
         var question = _.get(JSON.parse(_.get(data, 'data.body')), 'data.data.question');
-        console.log(question)
         $scope.questionTitle = question.text;
+        
         if(question.image){
             $scope.image = 'https://dev.ekstep.in'+ question.image;
         } else {
@@ -68,7 +87,20 @@ angular.module('quizApp', ['ngSanitize'])
 
     quizController.loadQuestion = function(){
             if(quizController.currentIndex <= totalQuestions-1){
-                socket.emit('next-question', {index: quizController.currentIndex});   
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "http://localhost:3000/nextQuestion/"+quizController.currentIndex,
+                    "method": "GET",
+                    "headers": {
+                      "cache-control": "no-cache",
+                      "Postman-Token": "9c93e14f-7f79-4f5b-81fe-b4853b8b7000"
+                    }
+                  }
+                  
+                  $.ajax(settings).done(function (response) {
+                    console.log(response);
+                  });
             } else {
                 quizController.showQuestion = false;
                 quizController.showDashboard = true;
