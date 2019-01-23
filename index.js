@@ -50,6 +50,10 @@ app.get('/packet', function(req, res){
   res.status(200).send({id: packetId});
 })
 
+app.delete('/packet', function(req, res){
+  packetId = undefined;
+  res.status(200).send({deleted: true});
+})
 
 
 var port = process.env.PORT || 3000;

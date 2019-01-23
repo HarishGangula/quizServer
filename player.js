@@ -3,20 +3,15 @@ angular.module('playerApp', ['ngSanitize'])
     const socket = io();
     var player = this;
     player.showOptions =  true;
-    player.showScan =  true;
+    player.showScan =  false;
+    player.optionsLoader =  false;
 
 
     socket.on('question', function(data){
-        quizController.showQuestion = true;
-        var options = _.get(JSON.parse(_.get(data, 'data.body')), 'data.data.options');
-        $scope.questionTitle = question.text;
-        if(question.image){
-            $scope.image = 'https://dev.ekstep.in'+ question.image;
-        } else {
-            $scope.image = '';
-        }
-        $scope.$apply();
-        quizController.startQuestionTimer()
+        console.log(data)
+        player.optionsLoader = false;
+        player.options = _.get(JSON.parse(_.get(data, 'data.body')), 'data.data.options');
+       // 'https://dev.ekstep.in'
     })
 
 

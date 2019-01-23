@@ -21,10 +21,11 @@
         </div>    
         <div class="ui huge segment" style="height: 100vh;" ng-show="player.showOptions">
                 <div class="grouped fields">
-                        <div class="field">
+                        <div class="field" ng-repeat="option in player.options" >
                           <div class="ui huge radio checkbox">
                             <input type="radio" name="option" checked="" tabindex="0" class="hidden">
-                            <label>Apples</label>
+                            <label ng-bind-html="option"></label>
+                            <img ng-if="option.image" class="ui tiny image" src="{{'https://dev.ekstep.in' + option.image}}"/>
                           </div>
                         </div>
                 </div>
