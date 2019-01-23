@@ -77,7 +77,7 @@
           var questionTimer = null;
           var player = this;
           var socket = io();
-          var userId = uuid();
+          var user = window.sessionStorage.getItem("user");
 
           player.showOptions = false;
           player.showScan = false;
@@ -126,7 +126,7 @@
             data.option = _.clone($scope.selectedOption);
             data.option.time = Date.now() - questionTimer;
             $scope.disableOptionContainer = true;
-            data.user = { code: userId, name: "harish" };
+            data.user = user;
             var settings = {
               async: true,
               crossDomain: true,

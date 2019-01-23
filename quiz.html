@@ -115,7 +115,6 @@
               "#FF3B58"
             );
             document.getElementById("qrcode").value = code.data;
-            alert(code.data);
             verifyQrCode(code.data);
           }
         }
@@ -136,6 +135,8 @@
         // Add your stall telemetry data and remove unwanted telemetry
 
         $.ajax({
+          async: true,
+          crossDomain: true,
           method: "POST",
           url: "http://104.211.78.0:8080/read-dev",
           data: JSON.stringify(data),
@@ -170,6 +171,8 @@
                 ]
               };
               $.ajax({
+                async: true,
+                crossDomain: true,
                 method: "POST",
                 url: "http://52.172.188.118:3000/v1/telemetry",
                 data: JSON.stringify(telemetryData),
@@ -177,6 +180,7 @@
                 contentType: "application/json"
               }).done(function(data) {
                 console.log(data);
+                window.location.replace("/player.html");
               });
             } else {
             }
