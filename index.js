@@ -76,8 +76,6 @@ app.post("/userResponse", (req, res) => {
   responses.push(req.body);
   res.end();
 });
-//require("./loadQuestions.js")(app);
-// set and get packet
 
 app.post("/packet/:id", function(req, res) {
   packetId = req.params.id;
