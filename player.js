@@ -62,6 +62,68 @@ angular.module('playerApp', ['ngSanitize'])
         }
         requestAnimationFrame(tick);
     }
+
+    function verifyQrCode(code) {
+        var data = {
+            request: {
+                code: code,
+                roleCode: 'teacher id',
+                stallCode: 'STA1',
+                ideaCode: 'Idea Code'
+            }
+        };
+        var telemetryData = {
+            "events": [{
+                "eid": "DC_START",
+                "ets": new Date().getTime(),
+                "did": "ddd",
+                "dimensions": {
+                    "visitorId": code,
+                    "stallId": "stallId",
+                    "ideaId": "ideaId",
+                    "visitorName": "Visitor Name",
+                    "studentId": "studentId",
+                    "studentName": "studentName",
+                    "teacherId": "teacherId",
+                    "teacherName": "teacherName",
+                    "parentId": "parentId",
+                    "parentName": "parentName",
+                    "stallName": "stallName",
+                    "ideaName": "ideaName",
+                    "classroomId": "classroomId",
+                    "school": "school",
+                    "district": "district",
+                    "period": "period",
+                    "topics": "topics",
+                    "subject": "subject",
+                    "grade": "grade"
+                },
+                "edata": {}
+            }
+            ]
+        };
+        $.ajax({
+            method: 'POST',
+            url: 'https://dev.ekstep.in/api/devcon/v3/login',
+            data: JSON.stringify(data),
+            dataType: 'json',
+            contentType: 'application/json',
+        }).done(function (data) {
+            if (data.result && data.result.Visitor) {
+                $.ajax({
+                    method: 'POST',
+                    url: 'http://52.172.188.118:3000/v1/telemetry',
+                    data: JSON.stringify(telemetryData),
+                    dataType: 'json',
+                    contentType: 'application/json',
+                }).done(function (data) {
+                    console.log(data)
+                });
+            } else {
+            }
+        }).error(function (error) {
+        });
+    }
   })
 
 
