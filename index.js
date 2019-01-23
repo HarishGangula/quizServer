@@ -6,6 +6,7 @@ let axios = require("axios");
 let _ = require("lodash");
 let fs = require("fs");
 var bodyParser = require("body-parser");
+var request1 = require("request");
 
 var questions;
 var responses = [];
@@ -129,6 +130,27 @@ app.use("/get/:id", async (req, res) => {
       res.status(404).json("unhandled erro");
     }
   }
+});
+
+app.post("/telemetry", function(req, res) {
+  console.log(re.body);
+  var options = {
+    method: "POST",
+    url: "http://52.172.188.118:3000/v1/telemetry",
+    headers: {
+      "Postman-Token": "8201b334-e622-4920-b760-6c4ab83ad26d",
+      "cache-control": "no-cache",
+      "Content-Type": "application/json"
+    },
+    body: req.body,
+    json: true
+  };
+
+  request1(options, function(error, response, body) {
+    if (error) console.log(error);
+    res.end();
+    console.log(body);
+  });
 });
 
 var port = process.env.PORT || 3000;

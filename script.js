@@ -111,7 +111,7 @@ angular
         };
         $.ajax(settings).done(function(response) {
           $scope.results = response.results;
-          console.log($scope.results);
+          $scope.sendPerformance(response.results);
           $scope.$apply();
         });
         quizController.showQuestion = false;
@@ -130,5 +130,46 @@ angular
           quizController.loadQuestion();
         }
       }, 1000);
+    };
+
+    $scope.sendPerformance = function(results) {
+      var events = [];
+      _.forEach(results, function(r) {
+        var event = {
+          eid: "DC_PERFORMANCE",
+          ets: new Date().getTime(),
+          dimensions: {
+            visitorId: r.code,
+            stallId: "STA2",
+            ideaId: "IDE7",
+            visitorName: _.get(r, "name"),
+            stallName: "Classroom",
+            ideaName: "Multiplayer Quiz",
+            school: _.get(r, "school"),
+            district: _.get(r, "district")
+          },
+          edata: {
+            type: "classroom",
+            mode: "play",
+            duration: r.time / 1000,
+            value: r.score
+          }
+        };
+        events.push(event);
+      });
+      var telemetryData = {
+        events: events
+      };
+      $.ajax({
+        async: true,
+        crossDomain: true,
+        method: "POST",
+        url: "http://52.172.188.118:3000/v1/telemetry",
+        data: JSON.stringify(telemetryData),
+        dataType: "json",
+        contentType: "application/json"
+      }).done(function(data) {
+        console.log(data);
+      });
     };
   });
