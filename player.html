@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="playerApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./semantic/semantic.min.css">
+</head>
+<body ng-controller="playerAppController as player">
+
+        <div class="ui huge segment" style="height: 100vh;" ng-show="player.showScan">
+            <div class="login-body">
+                <canvas style="width: 100%;" id="canvas"></canvas>
+                <label class="mb-3">( OR )</label>
+                <label class="mb-1 d-block" for="input-QR">Enter QR Code</label>
+                <input name="input-QR" id="qrcode" class="w-100 my-3 py-2" />
+                <button type="button" onclick="verifyQrCode
+                (document.getElementById('qrcode').value)" class="btn btn-primary btn-block mb-3 rounded-0">Login</button>
+            </div>
+        </div>    
+        <div class="ui huge segment" style="height: 100vh;" ng-show="player.showOptions">
+                <div class="grouped fields">
+                        <div class="field">
+                          <div class="ui huge radio checkbox">
+                            <input type="radio" name="option" checked="" tabindex="0" class="hidden">
+                            <label>Apples</label>
+                          </div>
+                        </div>
+                </div>
+        </div>
+        <script src="angular.js"></script>
+        <script src="angular-sanitize.min.js"></script>
+        <script src="./node_modules/timer.js/dist/timer.min.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./semantic/semantic.min.js"></script>
+        <script src="socket.io.js"></script>
+        <script src="lodash.min.js"></script>
+        <script src="./player.js"></script>
+</body>
+</html>
