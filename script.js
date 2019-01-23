@@ -2,7 +2,7 @@ angular
   .module("quizApp", ["ngSanitize"])
   .controller("quizAppController", function($interval, $timeout, $scope) {
     var quizController = this;
-    var totalQuestions = 5;
+    var totalQuestions = 1;
     var questionTime = 5;
     $scope.results = [];
     quizController.currentIndex = 0;
@@ -11,7 +11,7 @@ angular
     quizController.showQuestion = false;
     quizController.showDashboard = false;
 
-    quizController.timer = 10;
+    quizController.timer = 1;
     quizController.timerStyle = {
       "font-size": "200px",
       color: getRandomColor()

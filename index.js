@@ -9,6 +9,7 @@ var bodyParser = require("body-parser");
 
 var questions;
 var responses = [];
+var results = [];
 var packetId;
 var currentQuestion;
 
@@ -45,8 +46,7 @@ app.get("/endQuiz", (req, res) => {
   io.emit("endQuiz");
   var users = _.map(responses, "user");
   users = _.uniqWith(users, _.isEqual);
-  var results = [];
-
+  results = [];
   _.forEach(users, function(user) {
     var userResult = user;
     userResult.time = 0;
