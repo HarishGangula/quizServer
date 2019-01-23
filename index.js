@@ -42,6 +42,7 @@ app.get("/nextQuestion/:id", (req, res) => {
 });
 
 app.get("/endQuiz", (req, res) => {
+  io.emit("endQuiz");
   var users = _.map(responses, "user");
   users = _.uniqWith(users, _.isEqual);
   var results = [];
@@ -66,7 +67,7 @@ app.get("/endQuiz", (req, res) => {
   results.map(r => {
     return (r.rank = i++);
   });
-  io.emit("endQuiz", { results: results });
+  io.emit("results", { results: results });
   console.log(results);
   res.status(200).send({ results: results });
 });
