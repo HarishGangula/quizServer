@@ -126,9 +126,8 @@
         var data = {
           request: {
             code: code,
-            roleCode: "teacher id",
-            stallCode: "STA1",
-            ideaCode: "Idea Code"
+            stallCode: "STA2",
+            ideaCode: "IDE7"
           }
         };
 
@@ -138,14 +137,16 @@
           async: true,
           crossDomain: true,
           method: "POST",
-          url: "http://104.211.78.0:8080/read-dev",
+          url: "https://dev.ekstep.in/api/devcon/v3/login",
           data: JSON.stringify(data),
-          dataType: "json",
           contentType: "application/json"
         })
           .done(function(data) {
             if (data.result && data.result.Visitor) {
-              window.sessionStorage.setItem("user", data.result.Visitor);
+              window.sessionStorage.setItem(
+                "user",
+                JSON.stringify(data.result.Visitor)
+              );
               var telemetryData = {
                 events: [
                   {
@@ -160,11 +161,8 @@
                         _.get(data, "result.Visitor.name") || "participant 1",
                       stallName: "Classroom",
                       ideaName: "Multiplayer Quiz",
-                      classroomId: "classroomId",
-                      school:
-                        _.get(data, "result.Visitor.school") || "school 1",
-                      district:
-                        _.get(data, "result.Visitor.district") || "district 1"
+                      school: _.get(data, "result.Visitor.school"),
+                      district: _.get(data, "result.Visitor.district")
                     },
                     edata: {}
                   }

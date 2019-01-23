@@ -44,7 +44,6 @@ app.get("/nextQuestion/:id", (req, res) => {
 app.get("/endQuiz", (req, res) => {
   var users = _.map(responses, "user");
   users = _.uniqWith(users, _.isEqual);
-  console.log("users ", users);
   var results = [];
 
   _.forEach(users, function(user) {
@@ -63,24 +62,13 @@ app.get("/endQuiz", (req, res) => {
     results.push(userResult);
   });
   results = _.orderBy(results, ["score", "time"], ["desc", "asc"]);
-  // users = _.uniqBy(users, "code");
-  // var results = [];
-  // _.forEach(users, function(user) {
-  //   var data = user;
-  //   var userQuiz = userGroup[data.code];
-  //   data.score = 0;
-  //   if (userQuiz && userQuiz.length) {
-  //     data.score = (userQuiz.length / 10) * 100;
-  //   }
-  //   data.time = 0;
-  //   _.forEach(userQuiz, function(q) {
-  //     data.time = data.time + q.option.time;
-  //   });
-  //   results.push(data);
-  // });
-
+  var i = 1;
+  results.map(r => {
+    return (r.rank = i++);
+  });
   io.emit("endQuiz", { results: results });
-  res.end();
+  console.log(results);
+  res.status(200).send({ results: results });
 });
 
 app.post("/userResponse", (req, res) => {

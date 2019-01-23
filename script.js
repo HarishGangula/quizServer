@@ -4,6 +4,7 @@ angular
     var quizController = this;
     var totalQuestions = 2;
     var questionTime = 5;
+    $scope.results = [];
     quizController.currentIndex = 0;
     quizController.startQuizFlag = true;
     quizController.startQuizTimer = false;
@@ -44,6 +45,7 @@ angular
     };
 
     quizController.startQuizCall = function() {
+      $scope.results = [];
       quizController.startQuizTimer = false;
       quizController.showDashboard = false;
       var settings = {
@@ -107,7 +109,11 @@ angular
             "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
           }
         };
-        $.ajax(settings).done(function(response) {});
+        $.ajax(settings).done(function(response) {
+          $scope.results = response.results;
+          console.log($scope.results);
+          $scope.$apply();
+        });
         quizController.showQuestion = false;
         quizController.showDashboard = true;
       }
