@@ -164,7 +164,7 @@ angular
         async: true,
         crossDomain: true,
         method: "POST",
-        url: "http://52.172.188.118:3000/v1/telemetry",
+        url: "/telemetry",
         data: JSON.stringify(telemetryData),
         dataType: "json",
         contentType: "application/json"

@@ -6,12 +6,14 @@ let axios = require("axios");
 let _ = require("lodash");
 let fs = require("fs");
 var bodyParser = require("body-parser");
-var request1 = require("request");
+var request = require("request");
+const requestPromise = require("request-promise"); //  'request' npm package with Promise support
 
 var questions;
 var responses = [];
 var results = [];
 var packetId;
+var periodId;
 var currentQuestion;
 
 app.use(bodyParser.json());
@@ -28,6 +30,9 @@ app.get("/startQuiz", (req, res) => {
   responses = [];
   questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
   joel = _.find(questions, { identifier: "do_112682561142702080162" });
+  questions = _.filter(questions, function(o) {
+    return o.identifier !== "do_112682561142702080162";
+  });
   questions = _.shuffle(questions);
   questions = _.takeRight(questions, 9);
   questions.unshift(joel);
@@ -78,12 +83,14 @@ app.post("/userResponse", (req, res) => {
   res.end();
 });
 
-app.post("/packet/:id", function(req, res) {
+app.post("/packet/:id/:periodId", function(req, res) {
   packetId = req.params.id;
+  periodId = req.params.periodId;
   res.status(200).send({ status: true });
 });
 
-app.get("/packet", function(req, res) {
+app.get("/packet/:studentId", function(req, res) {
+  // Generate attendance event
   res.status(200).send({ id: packetId });
 });
 
@@ -92,7 +99,6 @@ app.delete("/packet", function(req, res) {
   res.status(200).send({ deleted: true });
 });
 
-const request = require("request-promise"); //  'request' npm package with Promise support
 const getQuestions = async allQuestionIds => {
   const questions = allQuestionIds.map(async questionId => {
     const options = {
@@ -100,7 +106,7 @@ const getQuestions = async allQuestionIds => {
       url: `https://dev.sunbirded.org/action/assessment/v3/items/read/${questionId}`,
       json: true
     };
-    const response = await request(options);
+    const response = await requestPromise(options);
     return response.result.assessment_item;
   });
   return await Promise.all(questions);
@@ -115,7 +121,7 @@ app.use("/get/:id", async (req, res) => {
   };
   let allQuestions;
   try {
-    allQuestions = await request(options);
+    allQuestions = await requestPromise(options);
     const allQuestionIds = [];
     allQuestions.result.content.questions.forEach(question => {
       allQuestionIds.push(question.identifier);
@@ -133,23 +139,32 @@ app.use("/get/:id", async (req, res) => {
 });
 
 app.post("/telemetry", function(req, res) {
-  console.log(res.body);
+  try {
+    fs.appendFileSync("telemetrydata.json", JSON.stringify(req.body));
+  } catch (error) {
+    console.log("error saving to file telemetry data");
+  }
+
   var options = {
     method: "POST",
     url: "http://52.172.188.118:3000/v1/telemetry",
     headers: {
-      "Postman-Token": "8201b334-e622-4920-b760-6c4ab83ad26d",
       "cache-control": "no-cache",
-      "Content-Type": "application/json"
+      "Postman-Token":
+        "d3005745-61cb-46e7-b254-94af6e266a12,ef05bf97-e656-409c-889b-71753ba02799",
+      "Content-Type": "application/json",
+      "Cache-Control": "no-cache",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2NTU0NDQ5ZWI0MGQ0YTI4ODQ3YzAzYWZlNmJjMmEyOCJ9.YhnTaDw_xvf8Q5S66QiO71-5WeqLaTPv-vvNZSwBqLk"
     },
     body: req.body,
     json: true
   };
-
-  request1(options, function(error, response, body) {
-    if (error) console.log(error);
+  console.log(JSON.stringify(options));
+  request(options, function(error, response, body) {
+    if (error) console.log("telemetry error,", error);
+    console.log("telemetry success, ", body);
     res.status(200).send(body);
-    console.log(body);
   });
 });
 
