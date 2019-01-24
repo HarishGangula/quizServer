@@ -224,7 +224,7 @@ app.post("/classroom/telemetry/:id", function(req, res) {
 
     var context = classContexts[req.params.id];
     console.log('class telemetry context', context);
-    console.log('Telemetry events', req.body.events);
+    console.log('Telemetry events', JSON.stringify(req.body.events));
     var events = req.body.events;
     var interactions = []
     events.forEach(function(event) {
