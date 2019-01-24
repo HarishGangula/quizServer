@@ -227,14 +227,14 @@ app.post("/classroom/telemetry/:id", function(req, res) {
     var events = req.body.events;
     var interactions = []
     events.forEach(function(event) {
-        var topic = _.find(event.context.cdata, _.matchesProperty('type', 'topic'));
+        var topic = _.find(event.context.cdata, {'type': 'topic'});
         if(topic) {
-            var topicId = topic[0].id;
+            var topicId = topic.id;
             if(!topicData[topicId]) topicData[topicId] = {eventsCount: 0, score: 0, maxscore: 0};
             topicData[topicId].eventsCount = topicData[topicId].eventsCount + 1;
             if(event.eid === 'ASSESS') {
                 topicData[topicId].score = topicData[topicId].score + event.edata.score;
-                topicData[topicId].maxscore = topicData[topicId].score + event.edata.maxscore;
+                topicData[topicId].maxscore = topicData[topicId].maxscore + event.edata.item.maxscore;
             }    
         }
         
@@ -246,6 +246,7 @@ app.post("/classroom/telemetry/:id", function(req, res) {
             "edata": {}
         })
     });
+    console.log('topicData', topicData);
     postTelemetryEvents(interactions, function(error, response, body) {
         if (error) console.log(error);
         console.log(body);
@@ -256,7 +257,7 @@ app.post("/classroom/telemetry/:id", function(req, res) {
 app.get("/classroom/end/:id", function(req, res) {
 
     var context = classContexts[req.params.id];
-    console.log('class end context', context);
+    console.log('class end context', context, 'topicData', topicData);
     var events = [];
     _.keysIn(topicData).forEach(function(key) {
         var data = topicData[key];
