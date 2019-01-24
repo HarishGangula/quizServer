@@ -114,6 +114,7 @@ app.post("/packet/:id/:periodId", function(req, res) {
     classContext.classroomId = periodData.grade;
     classContext.subject = periodData.subject;
     classStudents = _.shuffle(JSON.parse(JSON.stringify(periodData.students)));
+    console.log('students', classStudents);
     console.log('context', classContext);
     res.status(200).send({ status: true });
 });
