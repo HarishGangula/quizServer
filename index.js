@@ -109,9 +109,9 @@ const getQuestions = async allQuestionIds => {
 
 app.post("/packet/:id/:periodId", function(req, res) {
     packetId = req.params.id;
-    classContext.periodId = req.params.periodId;
-    var periodData = periodMap[classContext.periodId];
-    classContext.grade = periodData.grade;
+    classContext.period = req.params.periodId;
+    var periodData = periodMap[classContext.period];
+    classContext.classroomId = periodData.grade;
     classContext.subject = periodData.subject;
     classStudents = _.shuffle(JSON.parse(JSON.stringify(periodData.students)));
     console.log('context', classContext);
@@ -224,7 +224,6 @@ app.post("/classroom/telemetry/:id", function(req, res) {
 
     var context = classContexts[req.params.id];
     console.log('class telemetry context', context);
-    console.log('Telemetry events', JSON.stringify(req.body.events));
     var events = req.body.events;
     var interactions = []
     events.forEach(function(event) {
