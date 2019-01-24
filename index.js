@@ -222,7 +222,7 @@ app.delete("/packet", function(req, res) {
 
 app.post("/classroom/telemetry/:id", function(req, res) {
 
-    context = classContexts[req.params.id];
+    var context = classContexts[req.params.id];
     console.log('class telemetry context', context);
     var events = req.body.events;
     var interactions = []
@@ -246,7 +246,7 @@ app.post("/classroom/telemetry/:id", function(req, res) {
             "edata": {}
         })
     });
-    postTelemetryEvents(events, function(error, response, body) {
+    postTelemetryEvents(interactions, function(error, response, body) {
         if (error) console.log(error);
         console.log(body);
         res.status(200).send({});
@@ -255,7 +255,7 @@ app.post("/classroom/telemetry/:id", function(req, res) {
 
 app.get("/classroom/end/:id", function(req, res) {
 
-    context = classContexts[req.params.id];
+    var context = classContexts[req.params.id];
     console.log('class end context', context);
     var events = [];
     _.keysIn(topicData).forEach(function(key) {
