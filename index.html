@@ -59,14 +59,14 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Score</th>
+          <th>correct out of 10</th>
           <th>Time Taken</th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="result in results">
           <td data-label="Name">{{ result.name }}</td>
-          <td data-label="Age">{{ result.score }}</td>
+          <td data-label="Age">{{ result.score / 10 }}</td>
           <td data-label="Job">{{ result.time }}</td>
         </tr>
       </tbody>
