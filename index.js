@@ -114,6 +114,7 @@ app.post("/packet/:id/:periodId", function(req, res) {
     classContext.grade = periodData.grade;
     classContext.subject = periodData.subject;
     classStudents = _.shuffle(JSON.parse(JSON.stringify(periodData.students)));
+    console.log('context', classContext);
     res.status(200).send({ status: true });
 });
 
@@ -184,21 +185,26 @@ var classContext = {
     "school": "QSBB higher secondary school",
     "district": "Bangalore"
 };
+var classContexts = {};
 
 var classStudents = [];
 
-app.post("/classroom/start", function(req, res) {
+app.post("/classroom/start/:id", function(req, res) {
 
-    classContext.visitorId = req.body.visitorId;
-    classContext.visitorName = req.body.visitorName;
+    var context = JSON.parse(JSON.stringify(classContext));
+    context.visitorId = req.body.visitorId;
+    context.visitorName = req.body.visitorName;
     var student = classStudents.pop();
-    classContext.studentId = student.studentId;
-    classContext.studentName = student.studentName;
+    context.studentId = student.studentId;
+    context.studentName = student.studentName;
+
+    classContexts[req.params.id] = context;
+    console.log('class start context', context);
     postTelemetryEvent({
         "eid": "DC_ATTENDANCE",
         "ets": new Date().getTime(),
         "did": "device_001",
-        "dimensions": classContext,
+        "dimensions": context,
         "edata": {
             "value": 100
         }
@@ -214,7 +220,10 @@ app.delete("/packet", function(req, res) {
     res.status(200).send({ deleted: true });
 });
 
-app.post("/classroom/telemetry", function(req, res) {
+app.post("/classroom/telemetry/:id", function(req, res) {
+
+    context = classContexts[req.params.id];
+    console.log('class telemetry context', context);
     var events = req.body.events;
     var interactions = []
     events.forEach(function(event) {
@@ -233,7 +242,7 @@ app.post("/classroom/telemetry", function(req, res) {
             "eid": "DC_INTERACT",
             "ets": event.ets,
             "did": event.context.did,
-            "dimensions": _.assign(classContext, {topics: [topicId]}),
+            "dimensions": _.assign(context, {topics: [topicId]}),
             "edata": {}
         })
     });
@@ -244,8 +253,10 @@ app.post("/classroom/telemetry", function(req, res) {
     });
 });
 
-app.get("/classroom/end", function(req, res) {
+app.get("/classroom/end/:id", function(req, res) {
 
+    context = classContexts[req.params.id];
+    console.log('class end context', context);
     var events = [];
     _.keysIn(topicData).forEach(function(key) {
         var data = topicData[key];
@@ -253,7 +264,7 @@ app.get("/classroom/end", function(req, res) {
             "eid": "DC_ENGAGEMENT",
             "ets": new Date().getTime(),
             "did": "device_001",
-            "dimensions": _.assign(classContext, {topics: [key]}),
+            "dimensions": _.assign(context, {topics: [key]}),
             "edata": {
                 "value": data.eventsCount > 100 ? 100 : data.eventsCount
             }
@@ -262,7 +273,7 @@ app.get("/classroom/end", function(req, res) {
             "eid": "DC_PERFORMANCE",
             "ets": new Date().getTime(),
             "did": "device_001",
-            "dimensions": _.assign(classContext, {topics: [key]}),
+            "dimensions": _.assign(context, {topics: [key]}),
             "edata": {
                 "value": _.ceil((data.score * 100)/ data.maxscore)
             }
