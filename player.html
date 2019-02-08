@@ -2,85 +2,91 @@
 <html lang="en" ng-app="playerApp">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Quiz</title>
-  <link rel="stylesheet" href="./semantic/semantic.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./semantic/semantic.min.css" />
 </head>
 
 <body ng-controller="playerAppController as player">
-  <div class="ui huge segment" style="height: 100vh;" ng-show="player.showScan">
-    <div class="login-body">
-      <canvas style="width: 100%;" id="canvas"></canvas>
-      <label class="mb-3">( OR )</label>
-      <label class="mb-1 d-block" for="input-QR">Enter QR Code</label>
-      <input name="input-QR" id="qrcode" class="w-100 my-3 py-2" />
-      <button type="button" onclick="verifyQrCode
+    <div class="ui huge segment" style="height: 100vh;" ng-show="player.showScan">
+        <div class="login-body">
+            <canvas style="width: 100%;" id="canvas"></canvas>
+            <label class="mb-3">( OR )</label>
+            <label class="mb-1 d-block" for="input-QR">Enter QR Code</label>
+            <input name="input-QR" id="qrcode" class="w-100 my-3 py-2" />
+            <button type="button" onclick="verifyQrCode
                 (document.getElementById('qrcode').value)" class="btn btn-primary btn-block mb-3 rounded-0">
-        Login
-      </button>
+                Login
+            </button>
+        </div>
     </div>
-  </div>
-  <div class="ui huge placeholder segment" style="height: 100vh;">
-    <div ng-hide="quizStarted">
-      <img src="please_wait.jpg" alt="" style="display: block;width: 50%;margin: auto;" />
+    <div class="ui huge placeholder segment" style="height: 100vh;">
+        <div ng-hide="quizStarted">
+            <img src="please_wait.jpg" alt="" style="display: block;width: 50%;margin: auto;" />
+        </div>
+        <div class="ui active inverted dimmer" ng-show="quizEnded && !showResults">
+            <div class="ui text loader">
+                Hurray! The quiz is complete. Results will be shown in a moment...
+            </div>
+        </div>
+        <div ng-show="quizStarted && !quizEnded">
+            <h1 ng-bind-html="question.text" style="font-size:2em;"></h1>
+            <img class="ui centered huge image" ng-src="{{question.image}}" alt="" ng-if="question.image" />
+            <div class="ui fluid vertical large menu">
+                <a class="item" ng-repeat="option in options" ng-click="selectOption(option)" ng-class="{'active': option === selectedOption }">
+                    <span ng-bind-html="option.text"> </span>
+                    <i class="check icon" style="position: absolute;right: 20px;top: 20px;color: green;" ng-if="option === selectedOption"></i>
+                </a>
+            </div>
+            <div class="field">
+                <button class="ui primary button" ng-click="sendResponse()" ng-show="!disableOptionContainer">
+                    Submit
+                </button>
+                <button class="ui primary button" ng-click="sendResponse()" ng-show="disableOptionContainer" ng-disabled="true">
+                    Choice Submitted
+                </button>
+            </div>
+        </div>
+        <div ng-show="showResults">
+                <img src="first.jpg" alt="" ng-if="rank === 1" style="width: 50%;display: block;margin: 0 auto;" />
+                <img src="second.jpg" alt="" ng-if="rank === 2" style="width: 50%;display: block;margin: 0 auto;" />
+                <img src="third.jpg" alt="" ng-if="rank === 3" style="width: 50%;display: block;margin: 0 auto;" />
+                <img src="last.jpg" alt="" ng-if="rank === 4" style="width: 50%;display: block;margin: 0 auto;" />
+        </div>
+        <div class="ui button primary huge" ng-show="showResults" ng-click="restartQuiz()">
+            Start
+        </div>
     </div>
-    <div class="ui active inverted dimmer" ng-show="quizEnded && !showResults">
-      <div class="ui text loader">
-        Hurray! The quiz is complete. Results will be shown in a moment...
-      </div>
-    </div>
-    <div ng-show="quizStarted && !quizEnded">
-      <h1 ng-bind-html="question.text" style="font-size:2em;"></h1>
-      <img class="ui centered huge image" ng-src="{{question.image}}" alt="" ng-if="question.image" />
-      <div class="ui fluid vertical large menu">
-        <a class="item" ng-repeat="option in options" ng-click="selectOption(option)" ng-class="{'active': option === selectedOption }">
-          <span ng-bind-html="option.text"> </span>
-          <i class="check icon" style="position: absolute;right: 20px;top: 20px;color: green;" ng-if="option === selectedOption"></i>
-        </a>
-      </div>
-      <div class="field">
-        <button class="ui primary button" ng-click="sendResponse()" ng-show="!disableOptionContainer">
-          Submit
-        </button>
-        <button class="ui primary button" ng-click="sendResponse()" ng-show="disableOptionContainer" ng-disabled="true">
-          Choice Submitted
-        </button>
-      </div>
-    </div>
-    <div ng-show="showResults">
-      <img src="first.jpg" alt="" ng-if="rank === 1" style="width: 50%;display: block;margin: 0 auto;" />
-      <img src="second.jpg" alt="" ng-if="rank === 2" style="width: 50%;display: block;margin: 0 auto;" />
-      <img src="third.jpg" alt="" ng-if="rank === 3" style="width: 50%;display: block;margin: 0 auto;" />
-      <img src="last.jpg" alt="" ng-if="rank === 4" style="width: 50%;display: block;margin: 0 auto;" />
-    </div>
-    <div class="ui button primary huge" ng-show="showResults" ng-click="restartQuiz()">
-      Start
-    </div>
-  </div>
+</body>
 
-  <script src="angular.js"></script>
-  <script src="angular-sanitize.min.js"></script>
-  <script src="./node_modules/timer.js/dist/timer.min.js"></script>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="./semantic/semantic.min.js"></script>
-  <script src="socket.io.js"></script>
-  <script src="lodash.min.js"></script>
-  <script src="socket.js"></script>
-  <script src="uuid.min.js"></script>
-  <script>
-    angular
-      .module("playerApp", ["ngSanitize"])
-      .controller("playerAppController", function (
+<script src="angular.js"></script>
+<script src="angular-sanitize.min.js"></script>
+<script src="./node_modules/timer.js/dist/timer.min.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./semantic/semantic.min.js"></script>
+<script src="socket.io.js"></script>
+<script src="lodash.min.js"></script>
+<script src="socket.js"></script>
+<script src="uuid.min.js"></script>
+<script src="faker.js"></script>
+<script>
+
+angular.module("playerApp", ["ngSanitize"])
+    .controller("playerAppController", function(
         $interval,
         $timeout,
         $scope
-      ) {
+    ) {
         var questionTimer = Date.now();
         var player = this;
         var socket = io();
-        var user = JSON.parse(window.sessionStorage.getItem("user"));
+        faker.locale = "en_IND";
+        var user = {
+            code: faker.random.uuid(),
+            name: faker.name.findName()
+        }
 
         player.showOptions = false;
         player.showScan = false;
@@ -90,82 +96,94 @@
         $scope.disableOptionContainer = true;
         $scope.loadingMessage = "Waiting for Quiz to start......";
         $scope.rank = 0;
-        socket.on("question", function (data) {
-          $scope.selectedOption = null;
-          $scope.loadingMessage = "Loading next question........";
-          console.log("Question received", data);
-          $scope.showOptions = true;
-          $scope.disableOptionContainer = false;
-          $scope.options = _.get(
-            JSON.parse(_.get(data, "data.body")),
-            "data.data.options"
-          );
-          $scope.question = _.get(
-            JSON.parse(_.get(data, "data.body")),
-            "data.data.question"
-          );
-          $scope.$apply();
-          $(".ui.radio.checkbox").checkbox();
-          console.log("Question Options", player.options);
-          questionTimer = Date.now();
-          // 'https://dev.ekstep.in'
-        });
-        socket.on("startQuiz", function (data) {
-          $scope.rank = 0;
-          $scope.quizEnded = false;
-          $scope.quizStarted = true;
-          $scope.$apply();
-        });
-        socket.on("endQuiz", function (data) {
-          $scope.quizEnded = true;
-          $scope.$apply();
-        });
-        socket.on("results", function (data) {
-          $scope.showResults = true;
-          console.log("Ending quiz...", data);
-          $scope.loadingMessage = "Preparing results......";
-          var id = user.code;
-          r = _.find(data.results, { code: user.code });
-          console.log(r);
-          $scope.rank = r.rank;
-          $scope.$apply();
-          // 'https://dev.ekstep.in'
+        $scope.questionAnswered = false;
+        $scope.firstQuestion = true;
+        socket.on("question", function(data) {
+
+            if(!$scope.firstQuestion && !$scope.questionAnswered) {
+                $scope.sendResponse();
+            }
+            if($scope.firstQuestion) {
+                $scope.quizStarted = true;
+                $scope.firstQuestion = false;
+            }
+            $scope.selectedOption = null;
+            $scope.questionAnswered = false;
+            console.log("Question received", data);
+            $scope.showOptions = true;
+            $scope.disableOptionContainer = false;
+            $scope.options = _.get(
+                JSON.parse(_.get(data, "data.body")),
+                "data.data.options"
+            );
+            $scope.question = _.get(
+                JSON.parse(_.get(data, "data.body")),
+                "data.data.question"
+            );
+            $(".ui.radio.checkbox").checkbox();
+            console.log("Question Options", player.options);
+            questionTimer = Date.now();
+            $scope.$apply();
+            // 'https://dev.ekstep.in'
         });
 
-        $scope.selectOption = function (option) {
-          console.log(option);
-          $scope.selectedOption = option;
+        socket.on("endQuiz", function(data) {
+            if(!$scope.questionAnswered) {
+                $scope.sendResponse();
+            }
+            $scope.quizEnded = true;
+            $scope.$apply();
+        });
+        socket.on("results", function(data) {
+            $scope.showResults = true;
+            console.log("Ending quiz...", data);
+            $scope.loadingMessage = "Preparing results......";
+            var id = user.code;
+            r = _.find(data.results, { code: user.code });
+            console.log(r);
+            $scope.rank = r.rank;
+            $scope.$apply();
+        });
+
+        $scope.selectOption = function(option) {
+            console.log(option);
+            $scope.selectedOption = option;
         };
-        $scope.sendResponse = function () {
-          var data = {};
-          data.option = _.clone($scope.selectedOption);
-          data.option.time = Date.now() - questionTimer;
-          $scope.disableOptionContainer = true;
-          data.user = user;
-          var settings = {
-            async: true,
-            crossDomain: true,
-            url: "/userResponse",
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "cache-control": "no-cache",
-              "Postman-Token": "c36c5931-fbf2-436f-9481-26f3ad9d0b55"
-            },
-            processData: false,
-            data: JSON.stringify(data)
-          };
+        $scope.sendResponse = function() {
+            var data = {};
+            if($scope.selectedOption) {
+                data.option = _.clone($scope.selectedOption);    
+            } else {
+                data.option = {
+                    isCorrect: false
+                }
+            }
+            $scope.questionAnswered = true;
+            data.option.time = Date.now() - questionTimer;
+            $scope.disableOptionContainer = true;
+            data.user = user;
+            var settings = {
+                async: true,
+                crossDomain: true,
+                url: "/userResponse",
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "cache-control": "no-cache",
+                    "Postman-Token": "c36c5931-fbf2-436f-9481-26f3ad9d0b55"
+                },
+                processData: false,
+                data: JSON.stringify(data)
+            };
 
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-          });
+            $.ajax(settings).done(function(response) {
+                console.log(response);
+            });
         };
 
-        $scope.restartQuiz = function () {
-          window.location.replace("/quiz.html");
+        $scope.restartQuiz = function() {
+            window.location.replace("/player.html");
         };
-      });
-  </script>
-</body>
-
+    });
+</script>
 </html>

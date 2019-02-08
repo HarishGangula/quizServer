@@ -10,6 +10,7 @@ var request1 = require("request");
 var faker = require("faker");
 
 var questions;
+var questionLength;
 var responses = [];
 var results = [];
 var packetId;
@@ -33,28 +34,31 @@ io.on("disconnect", function() {
     io.emit("quiz-ended", { quizId: socket.quizId, event: "end" });
 });
 
-app.get("/quiz/start/:contentId", (req, res) => {
-    console.log('Start Quiz command received with content - ' + req.params.contentId, faker.name.findName(), faker.random.uuid());
+const request = require("request-promise");
+var interval = undefined;
+var quizContext = {
+    "stallId": "STA2",
+    "stallName": "Classroom",
+    "ideaId": "IDE7",
+    "ideaName": "Multiplayer Quiz",
+    "school": "QSBB higher secondary school",
+    "district": "Bangalore"
+};
+
+const startQuiz = async function(contentId) {
+    console.log('Start quiz command received with content - ' + contentId);
     responses = [];
-    questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
+    questions = await getContentQuestions(contentId);
+    questionLength = questions.length;
+    console.log('questions size', questions.length);
     io.emit("startQuiz", {});
     quizStatus = "STARTED";
-    res.json({"quizStatus": quizStatus});
-});
+    loopQuestions();
+    
+}
 
-app.get("/quiz/status", (req, res) => {
-    res.json({"quizStatus": quizStatus});
-});
-
-app.get("/nextQuestion/:id", (req, res) => {
-    quizStatus = "IN_PROGRESS";
-    var id = parseInt(req.params.id, 10);
-    currentQuestion = questions[id];
-    io.emit("question", { data: currentQuestion });
-    res.end();
-});
-
-app.get("/endQuiz", (req, res) => {
+const endQuiz = function() {
+    console.log("Quiz ended...");
     io.emit("endQuiz");
     var users = _.map(responses, "user");
     users = _.uniqWith(users, _.isEqual);
@@ -71,7 +75,7 @@ app.get("/endQuiz", (req, res) => {
                 }
             }
         });
-        userResult.score = (userResult.score / 10) * 100;
+        userResult.score = (userResult.score / questionLength) * 100;
         results.push(userResult);
     });
     results = _.orderBy(results, ["score", "time"], ["desc", "asc"]);
@@ -81,16 +85,33 @@ app.get("/endQuiz", (req, res) => {
     });
     io.emit("results", { results: results });
     console.log(results);
-    res.status(200).send({ results: results });
     quizStatus = "ENDED";
-});
+    return results;
+}
 
-app.post("/userResponse", (req, res) => {
-    responses.push(req.body);
-    res.end();
-});
-
-const request = require("request-promise");
+const getContentQuestions = async contentId => {
+    const options = {
+        method: "GET",
+        url: 'https://dev.sunbirded.org/api/content/v1/read/'+contentId+'?fields=questions,topics',
+        json: true
+    };
+    let allQuestions;
+    try {
+        allQuestions = await request(options);
+        const allQuestionIds = [];
+        if(allQuestions.result && allQuestions.result.content) {
+            quizContext.topics = [allQuestions.result.content.topic];
+            allQuestions.result.content.questions.forEach(question => {
+                allQuestionIds.push(question.identifier);
+            });
+            return await getQuestions(allQuestionIds);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    return [];
+};
+    
 const getQuestions = async allQuestionIds => {
     const questions = allQuestionIds.map(async questionId => {
         const options = {
@@ -103,6 +124,63 @@ const getQuestions = async allQuestionIds => {
     });
     return await Promise.all(questions);
 };
+
+const loopQuestions = function() {
+    console.log("Question loop activated...");
+    interval = setInterval(function() {
+        if(questions.length == 0) {
+            clearInterval(interval);
+            endQuiz();
+        } else {
+            quizStatus = "IN_PROGRESS";
+            currentQuestion = questions.pop();
+            io.emit("question", { data: currentQuestion });
+            console.log("Questions remaining - " +  questions.length);
+        }
+    }, 5000);
+}
+
+const quizResponse = function(response) {
+
+    console.log('response', response);
+    var context = JSON.parse(JSON.stringify(quizContext));
+    context.visitorId = response.user.code;
+    context.visitorName = response.user.name;
+    context.studentId = response.user.code;
+    context.studentName = response.user.name;
+    responses.push(response);
+    postTelemetryEvent({
+        "eid": "DC_PERFORMANCE",
+        "ets": new Date().getTime(),
+        "did": "device_001",
+        "dimensions": context,
+        "edata": {
+            duration: (response.option.time/1000),
+            value: (response.option.isCorrect ? 100 : 0)
+        }
+    }, function(error, response, body) {
+        if (error) console.log(error);
+    });
+}
+
+app.get("/quiz/start/:contentId", async (req, res) => {
+    await startQuiz(req.params.contentId);
+    res.json({"quizStatus": quizStatus});
+});
+
+app.get("/quiz/status", (req, res) => {
+    res.json({"quizStatus": quizStatus});
+});
+
+app.get("/endQuiz", (req, res) => {
+    results = endQuiz();
+    res.status(200).send({ results: results });
+});
+
+app.post("/userResponse", (req, res) => {
+    quizResponse(req.body);
+    res.end();
+});
 
 //
 //  Multiplayer Quiz - End
@@ -323,6 +401,7 @@ app.use("/get/:id", async (req, res) => {
 //
 
 function postTelemetryEvent(event, cb) {
+    console.log('event', event);
     postTelemetryEvents([event], cb);
 }
 
