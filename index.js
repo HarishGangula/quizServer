@@ -37,7 +37,6 @@ app.get("/quiz/start/:contentId", (req, res) => {
     console.log('Start Quiz command received with content - ' + req.params.contentId, faker.name.findName(), faker.random.uuid());
     responses = [];
     questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
-    joel = _.find(questions, { identifier: "do_112682561142702080162" });
     questions = _.shuffle(questions);
     questions = _.takeRight(questions, 9);
     questions.unshift(joel);
@@ -348,7 +347,7 @@ function postTelemetryEvents(events, cb) {
 }
 
 app.post("/telemetry", function(req, res) {
-
+    console.log('telemetry event', req.body);
     postTelemetryEvents(req.body, function(error, response, body) {
         if (error) console.log(error);
         console.log(body);
