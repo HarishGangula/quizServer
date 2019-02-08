@@ -8,6 +8,7 @@ let fs = require("fs");
 var bodyParser = require("body-parser");
 var request1 = require("request");
 var faker = require("faker");
+const sleep = require('sleep-async')();
 
 var questions;
 var questionLength;
@@ -127,17 +128,42 @@ const getQuestions = async allQuestionIds => {
 
 const loopQuestions = function() {
     console.log("Question loop activated...");
-    interval = setInterval(function() {
+    /*interval = setInterval(function() {
         if(questions.length == 0) {
             clearInterval(interval);
             endQuiz();
         } else {
-            quizStatus = "IN_PROGRESS";
+            
+        }
+    }, 5000);*/
+    quizStatus = "IN_PROGRESS";
+    questions.forEach(function(question, idx) {
+        setTimeout(function() {
+            io.emit("question", { data: question });
+        }, 5000 * (idx+1));
+    })
+    setTimeout(function() {
+        endQuiz();
+    }, 5000 * questions.length);
+
+    /*
+    sleep.sleepWithCondition(function() {
+            if(questions.length == 0) {
+                endQuiz();
+            }
+            return questions.length == 0;
+        },
+        {
+            sleep: 5000,
+            interval: 2500
+        },
+        function() {
+            
             currentQuestion = questions.pop();
             io.emit("question", { data: currentQuestion });
             console.log("Questions remaining - " +  questions.length);
         }
-    }, 5000);
+    );*/
 }
 
 const quizResponse = function(response) {

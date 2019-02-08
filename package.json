@@ -21,6 +21,7 @@
     "lodash": "^4.17.11",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
+    "sleep-async": "^1.0.5",
     "socket.io": "^2.2.0",
     "timer.js": "^1.0.4"
   }
