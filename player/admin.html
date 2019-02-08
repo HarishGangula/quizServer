@@ -37,7 +37,7 @@
       style="height: 100vh;"
       ng-show="quizController.showQuestion"
     >
-      <h1></h1>
+      <h1>Question Number: {{ quizController.currentIndex + 1 }}</h1>
       <button
         class="ui right floated massive teal button"
         style="position: fixed;right: 1em;top: 1em;"
@@ -52,26 +52,27 @@
         ng-if="image"
       />
     </div>
-    <table
-      class="ui huge celled inverted table"
+    <div
+      class="ui placeholder huge segment"
       ng-show="quizController.showDashboard"
     >
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>correct out of 10</th>
-          <th>Time Taken(sec)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="result in results">
-          <td data-label="Name">{{ result.name }}</td>
-          <td data-label="Age">{{ result.score / 10 }}</td>
-          <td data-label="Job">{{ result.time / 1000 }}</td>
-        </tr>
-      </tbody>
-    </table>
-
+      <table class="ui huge celled table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Correct Answers of 10</th>
+            <th>Time Taken(In seconds)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="result in results">
+            <td data-label="Name">{{ result.name }}</td>
+            <td data-label="Age">{{ result.score / 10 }}</td>
+            <td data-label="Job">{{ result.time / 1000 }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <script src="angular.js"></script>
     <script src="angular-sanitize.min.js"></script>
     <script src="./node_modules/timer.js/dist/timer.min.js"></script>
