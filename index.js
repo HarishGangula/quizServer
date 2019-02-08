@@ -31,7 +31,8 @@ io.on("disconnect", function() {
     io.emit("quiz-ended", { quizId: socket.quizId, event: "end" });
 });
 
-app.get("/startQuiz", (req, res) => {
+app.get("/startQuiz/:contentId", (req, res) => {
+    console.log('Start Quiz command received with content - ' + req.params.contentId);
     responses = [];
     questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
     joel = _.find(questions, { identifier: "do_112682561142702080162" });
