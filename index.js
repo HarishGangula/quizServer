@@ -17,6 +17,7 @@ var periodId;
 var classContext = {};
 var currentQuestion;
 var topicData = {};
+var quizStatus = "NOT_STARTED";
 
 app.use(bodyParser.json());
 
@@ -32,8 +33,8 @@ io.on("disconnect", function() {
     io.emit("quiz-ended", { quizId: socket.quizId, event: "end" });
 });
 
-app.get("/startQuiz/:contentId", (req, res) => {
-    console.log('Start Quiz command received with content - ' + req.params.contentId, faker.name.findName(), faker.random.alphaNumeric());
+app.get("/quiz/start/:contentId", (req, res) => {
+    console.log('Start Quiz command received with content - ' + req.params.contentId, faker.name.findName(), faker.random.uuid());
     responses = [];
     questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
     joel = _.find(questions, { identifier: "do_112682561142702080162" });
@@ -42,10 +43,16 @@ app.get("/startQuiz/:contentId", (req, res) => {
     questions.unshift(joel);
     questions = _.shuffle(questions);
     io.emit("startQuiz", {});
-    res.end();
+    quizStatus = "STARTED";
+    res.json({"quizStatus": quizStatus});
+});
+
+app.get("/quiz/status", (req, res) => {
+    res.json({"quizStatus": quizStatus});
 });
 
 app.get("/nextQuestion/:id", (req, res) => {
+    quizStatus = "IN_PROGRESS";
     var id = parseInt(req.params.id, 10);
     currentQuestion = questions[id];
     io.emit("question", { data: currentQuestion });
@@ -80,6 +87,7 @@ app.get("/endQuiz", (req, res) => {
     io.emit("results", { results: results });
     console.log(results);
     res.status(200).send({ results: results });
+    quizStatus = "ENDED";
 });
 
 app.post("/userResponse", (req, res) => {
