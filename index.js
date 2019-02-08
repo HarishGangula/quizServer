@@ -37,10 +37,6 @@ app.get("/quiz/start/:contentId", (req, res) => {
     console.log('Start Quiz command received with content - ' + req.params.contentId, faker.name.findName(), faker.random.uuid());
     responses = [];
     questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
-    questions = _.shuffle(questions);
-    questions = _.takeRight(questions, 9);
-    questions.unshift(joel);
-    questions = _.shuffle(questions);
     io.emit("startQuiz", {});
     quizStatus = "STARTED";
     res.json({"quizStatus": quizStatus});
