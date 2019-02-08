@@ -1,85 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="quizApp">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./semantic/semantic.min.css" />
-  </head>
-  <body ng-controller="quizAppController as quizController">
-    <div
-      class="ui placeholder huge segment"
-      style="height: 100vh;"
-      ng-show="quizController.startQuizFlag"
-    >
-      <a id="play" ng-click="quizController.start()">
-        <img
-          src="start_button.gif"
-          alt=""
-          srcset=""
-          style="display: block;margin: 0 auto;"
-        />
-      </a>
-    </div>
-    <div
-      class="ui placeholder huge segment"
-      style="height: 100vh;"
-      ng-show="quizController.startQuizTimer"
-    >
-      <div class="ui icon huge header">
-        <h1 ng-style="quizController.timerStyle">{{ quizController.timer }}</h1>
-      </div>
-    </div>
 
-    <div
-      class="ui placeholder huge segment"
-      style="height: 100vh;"
-      ng-show="quizController.showQuestion"
-    >
-      <h1></h1>
-      <button
-        class="ui right floated massive teal button"
-        style="position: fixed;right: 1em;top: 1em;"
-      >
-        {{ quizController.quizQuestionTime + 1 }}
-      </button>
-      <h1 ng-bind-html="questionTitle" style="font-size:2em;"></h1>
-      <img
-        class="ui centered huge image"
-        src="{{ image }}"
-        alt=""
-        ng-if="image"
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="./semantic/semantic.min.css" />
+</head>
+
+<body ng-controller="quizAppController as quizController">
+  <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.startQuizFlag">
+    <a id="play" ng-click="quizController.start()">
+      <img src="start_button.gif" alt="" srcset="" style="display: block;margin: 0 auto;" />
+    </a>
+  </div>
+  <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.startQuizTimer">
+    <div class="ui icon huge header">
+      <h1 ng-style="quizController.timerStyle">{{ quizController.timer }}</h1>
     </div>
-    <table
-      class="ui huge celled inverted table"
-      ng-show="quizController.showDashboard"
-    >
+  </div>
+
+  <div class="ui placeholder huge segment" style="height: 100vh;" ng-show="quizController.showQuestion">
+    <h1>Question Number: {{ quizController.currentIndex + 1 }}</h1>
+    <button class="ui right floated massive teal button" style="position: fixed;right: 1em;top: 1em;">
+      {{ quizController.quizQuestionTime + 1 }}
+    </button>
+    <h1 ng-bind-html="questionTitle" style="font-size:2em;"></h1>
+    <img class="ui centered huge image" src="{{ image }}" alt="" ng-if="image" />
+  </div>
+  <div class="ui placeholder huge segment" ng-show="quizController.showDashboard">
+    <table class="ui huge celled table">
       <thead>
         <tr>
           <th>Name</th>
-          <th>correct out of 10</th>
-          <th>Time Taken</th>
+          <th>Correct Answers of 10</th>
+          <th>Time Taken(In seconds)</th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="result in results">
           <td data-label="Name">{{ result.name }}</td>
           <td data-label="Age">{{ result.score / 10 }}</td>
-          <td data-label="Job">{{ result.time }}</td>
+          <td data-label="Job">{{ result.time / 1000 }}</td>
         </tr>
       </tbody>
     </table>
+  </div>
+  <script src="angular.js"></script>
+  <script src="angular-sanitize.min.js"></script>
+  <script src="./node_modules/timer.js/dist/timer.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./semantic/semantic.min.js"></script>
+  <script src="socket.io.js"></script>
+  <script src="lodash.min.js"></script>
+  <script src="socket.js"></script>
+  <script src="./script.js"></script>
+</body>
 
-    <script src="angular.js"></script>
-    <script src="angular-sanitize.min.js"></script>
-    <script src="./node_modules/timer.js/dist/timer.min.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./semantic/semantic.min.js"></script>
-    <script src="socket.io.js"></script>
-    <script src="lodash.min.js"></script>
-    <script src="socket.js"></script>
-    <script src="./script.js"></script>
-  </body>
 </html>
