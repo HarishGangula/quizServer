@@ -144,7 +144,7 @@ const loopQuestions = function() {
     })
     setTimeout(function() {
         endQuiz();
-    }, 5000 * questions.length);
+    }, 5000 * (questions.length + 1));
 
     /*
     sleep.sleepWithCondition(function() {
@@ -174,6 +174,7 @@ const quizResponse = function(response) {
     context.studentId = response.user.code;
     context.studentName = response.user.name;
     responses.push(response);
+    console.log('response', JSON.stringify(response));
     postTelemetryEvent({
         "eid": "DC_PERFORMANCE",
         "ets": new Date().getTime(),
