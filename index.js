@@ -7,6 +7,8 @@ let _ = require("lodash");
 let fs = require("fs");
 var bodyParser = require("body-parser");
 var request1 = require("request");
+const requestPromise = require("request-promise"); //  'request' npm package with Promise support
+const path = require("path");
 
 var questions;
 var responses = [];
@@ -25,9 +27,9 @@ app.use("/", express.static(__dirname + "/"));
 //  Multiplayer Quiz - Start
 //
 
-io.on("connection", socket => {});
+io.on("connection", socket => { });
 
-io.on("disconnect", function() {
+io.on("disconnect", function () {
     io.emit("quiz-ended", { quizId: socket.quizId, event: "end" });
 });
 
@@ -35,11 +37,6 @@ app.get("/startQuiz/:contentId", (req, res) => {
     console.log('Start Quiz command received with content - ' + req.params.contentId);
     responses = [];
     questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
-    joel = _.find(questions, { identifier: "do_112682561142702080162" });
-    questions = _.shuffle(questions);
-    questions = _.takeRight(questions, 9);
-    questions.unshift(joel);
-    questions = _.shuffle(questions);
     io.emit("startQuiz", {});
     res.end();
 });
@@ -51,16 +48,17 @@ app.get("/nextQuestion/:id", (req, res) => {
     res.end();
 });
 
+
 app.get("/endQuiz", (req, res) => {
     io.emit("endQuiz");
     var users = _.map(responses, "user");
     users = _.uniqWith(users, _.isEqual);
     results = [];
-    _.forEach(users, function(user) {
+    _.forEach(users, function (user) {
         var userResult = user;
         userResult.time = 0;
         userResult.score = 0;
-        _.forEach(responses, function(response) {
+        _.forEach(responses, function (response) {
             if (user.code === response.user.code) {
                 userResult.time = userResult.time + response.option.time;
                 if (response.option.isCorrect) {
@@ -86,19 +84,44 @@ app.post("/userResponse", (req, res) => {
     res.end();
 });
 
-const request = require("request-promise");
+// get questions and store file
+
+
 const getQuestions = async allQuestionIds => {
     const questions = allQuestionIds.map(async questionId => {
         const options = {
             method: "GET",
-            url: `https://dev.sunbirded.org/action/assessment/v3/items/read/${questionId}`,
+            url: `https://dev.ekstep.in/api/assessment/v3/items/read/${questionId}`,
             json: true
         };
-        const response = await request(options);
+        const response = await requestPromise(options);
         return response.result.assessment_item;
     });
     return await Promise.all(questions);
 };
+
+async function loadQuestions(contentId) {
+    const options = {
+        method: "GET",
+        url: `https://dev.ekstep.in/api/content/v3/read/${contentId}?fields=questions`,
+        json: true
+    };
+    let allQuestions;
+    try {
+        allQuestions = await requestPromise(options);
+        const allQuestionIds = [];
+        allQuestions.result.content.questions.forEach(question => {
+            allQuestionIds.push(question.identifier);
+        });
+        questionMeta = await getQuestions(allQuestionIds);
+        console.log(questionMeta);
+        fs.writeFileSync(path.join(__dirname, './questions.json'), JSON.stringify(questionMeta), 'utf8')
+    } catch (error) {
+        console.log('Error while loading questions: ', error);
+    }
+}
+
+loadQuestions('do_112682538715676672114')
 
 //
 //  Multiplayer Quiz - End
@@ -108,7 +131,7 @@ const getQuestions = async allQuestionIds => {
 //  Classroom APIs - Start
 //
 
-app.post("/packet/:id/:periodId", function(req, res) {
+app.post("/packet/:id/:periodId", function (req, res) {
     packetId = req.params.id;
     classContext.period = req.params.periodId;
     var periodData = periodMap[classContext.period];
@@ -126,55 +149,55 @@ var periodMap = {
         "grade": "Class 3",
         "subject": "EVS",
         "students": [
-            {"studentId": "STU1", "studentName": "Nandu"}, 
-            {"studentId": "STU2", "studentName": "Vedanth"},
-            {"studentId": "STU3", "studentName": "Aashna"},
-            {"studentId": "STU4", "studentName": "Akira"},
-            {"studentId": "STU5", "studentName": "Vandhana"}
+            { "studentId": "STU1", "studentName": "Nandu" },
+            { "studentId": "STU2", "studentName": "Vedanth" },
+            { "studentId": "STU3", "studentName": "Aashna" },
+            { "studentId": "STU4", "studentName": "Akira" },
+            { "studentId": "STU5", "studentName": "Vandhana" }
         ]
     },
     "PTCH2_2": {
         "grade": "Class 4",
         "subject": "Geography",
         "students": [
-            {"studentId": "STU6", "studentName": "Anu"}, 
-            {"studentId": "STU7", "studentName": "Deepa"},
-            {"studentId": "STU8", "studentName": "Deepak"},
-            {"studentId": "STU9", "studentName": "Manoj"},
-            {"studentId": "STU10", "studentName": "Hari"}
+            { "studentId": "STU6", "studentName": "Anu" },
+            { "studentId": "STU7", "studentName": "Deepa" },
+            { "studentId": "STU8", "studentName": "Deepak" },
+            { "studentId": "STU9", "studentName": "Manoj" },
+            { "studentId": "STU10", "studentName": "Hari" }
         ]
     },
     "PTCH3_2": {
         "grade": "Class 4",
         "subject": "EVS",
         "students": [
-            {"studentId": "STU6", "studentName": "Anu"}, 
-            {"studentId": "STU7", "studentName": "Deepa"},
-            {"studentId": "STU8", "studentName": "Deepak"},
-            {"studentId": "STU9", "studentName": "Manoj"},
-            {"studentId": "STU10", "studentName": "Hari"}
+            { "studentId": "STU6", "studentName": "Anu" },
+            { "studentId": "STU7", "studentName": "Deepa" },
+            { "studentId": "STU8", "studentName": "Deepak" },
+            { "studentId": "STU9", "studentName": "Manoj" },
+            { "studentId": "STU10", "studentName": "Hari" }
         ]
     },
     "PTCH4_2": {
         "grade": "Class 5",
         "subject": "Geography",
         "students": [
-            {"studentId": "STU11", "studentName": "Pritha"},
-            {"studentId": "STU12", "studentName": "Bindu"},
-            {"studentId": "STU13", "studentName": "Neel"},
-            {"studentId": "STU14", "studentName": "Harsha"},
-            {"studentId": "STU15", "studentName": "Harshita"}
+            { "studentId": "STU11", "studentName": "Pritha" },
+            { "studentId": "STU12", "studentName": "Bindu" },
+            { "studentId": "STU13", "studentName": "Neel" },
+            { "studentId": "STU14", "studentName": "Harsha" },
+            { "studentId": "STU15", "studentName": "Harshita" }
         ]
     },
     "PTCH5_2": {
         "grade": "Class 8",
         "subject": "Science",
         "students": [
-            {"studentId": "STU16", "studentName": "Rajesh"},
-            {"studentId": "STU17", "studentName": "Mohana"},
-            {"studentId": "STU18", "studentName": "Ramya"},
-            {"studentId": "STU19", "studentName": "Banu"},
-            {"studentId": "STU20", "studentName": "Boominathan"}
+            { "studentId": "STU16", "studentName": "Rajesh" },
+            { "studentId": "STU17", "studentName": "Mohana" },
+            { "studentId": "STU18", "studentName": "Ramya" },
+            { "studentId": "STU19", "studentName": "Banu" },
+            { "studentId": "STU20", "studentName": "Boominathan" }
         ]
     }
 }
@@ -191,7 +214,7 @@ var classContexts = {};
 
 var classStudents = [];
 
-app.post("/classroom/start/:id", function(req, res) {
+app.post("/classroom/start/:id", function (req, res) {
 
     var context = JSON.parse(JSON.stringify(classContext));
     context.visitorId = req.body.visitorId;
@@ -210,64 +233,64 @@ app.post("/classroom/start/:id", function(req, res) {
         "edata": {
             "value": 100
         }
-    }, function(error, response, body) {
+    }, function (error, response, body) {
         if (error) console.log(error);
         console.log(body);
         res.status(200).send({ id: packetId });
     })
 });
 
-app.delete("/packet", function(req, res) {
+app.delete("/packet", function (req, res) {
     packetId = undefined;
     res.status(200).send({ deleted: true });
 });
 
-app.post("/classroom/telemetry/:id", function(req, res) {
+app.post("/classroom/telemetry/:id", function (req, res) {
 
     var context = classContexts[req.params.id];
     console.log('class telemetry context', context);
     var events = req.body.events;
     var interactions = []
-    events.forEach(function(event) {
-        var topic = _.find(event.context.cdata, {'type': 'topic'});
-        if(topic) {
+    events.forEach(function (event) {
+        var topic = _.find(event.context.cdata, { 'type': 'topic' });
+        if (topic) {
             var topicId = topic.id;
-            if(!topicData[topicId]) topicData[topicId] = {eventsCount: 0, score: 0, maxscore: 0};
+            if (!topicData[topicId]) topicData[topicId] = { eventsCount: 0, score: 0, maxscore: 0 };
             topicData[topicId].eventsCount = topicData[topicId].eventsCount + 1;
-            if(event.eid === 'ASSESS') {
+            if (event.eid === 'ASSESS') {
                 topicData[topicId].score = topicData[topicId].score + event.edata.score;
                 topicData[topicId].maxscore = topicData[topicId].maxscore + event.edata.item.maxscore;
-            }    
+            }
         }
-        
+
         interactions.push({
             "eid": "DC_INTERACT",
             "ets": event.ets,
             "did": event.context.did,
-            "dimensions": _.assign(context, {topics: [topicId]}),
+            "dimensions": _.assign(context, { topics: [topicId] }),
             "edata": {}
         })
     });
     console.log('topicData', topicData);
-    postTelemetryEvents(interactions, function(error, response, body) {
+    postTelemetryEvents(interactions, function (error, response, body) {
         if (error) console.log(error);
         console.log(body);
         res.status(200).send({});
     });
 });
 
-app.get("/classroom/end/:id", function(req, res) {
+app.get("/classroom/end/:id", function (req, res) {
 
     var context = classContexts[req.params.id];
     console.log('class end context', context, 'topicData', topicData);
     var events = [];
-    _.keysIn(topicData).forEach(function(key) {
+    _.keysIn(topicData).forEach(function (key) {
         var data = topicData[key];
         events.push({
             "eid": "DC_ENGAGEMENT",
             "ets": new Date().getTime(),
             "did": "device_001",
-            "dimensions": _.assign(context, {topics: [key]}),
+            "dimensions": _.assign(context, { topics: [key] }),
             "edata": {
                 "value": data.eventsCount > 100 ? 100 : data.eventsCount
             }
@@ -276,43 +299,19 @@ app.get("/classroom/end/:id", function(req, res) {
             "eid": "DC_PERFORMANCE",
             "ets": new Date().getTime(),
             "did": "device_001",
-            "dimensions": _.assign(context, {topics: [key]}),
+            "dimensions": _.assign(context, { topics: [key] }),
             "edata": {
-                "value": _.ceil((data.score * 100)/ data.maxscore)
+                "value": _.ceil((data.score * 100) / data.maxscore)
             }
         });
     });
-    postTelemetryEvents(events, function(error, response, body) {
+    postTelemetryEvents(events, function (error, response, body) {
         if (error) console.log(error);
         console.log(body);
         res.status(200).send({});
     })
 });
 
-app.use("/get/:id", async (req, res) => {
-    const options = {
-        method: "GET",
-        url: `https://dev.sunbirded.org/api/content/v1/read/${req.params.id}?fields=questions`,
-        json: true
-    };
-    let allQuestions;
-    try {
-        allQuestions = await request(options);
-        const allQuestionIds = [];
-        allQuestions.result.content.questions.forEach(question => {
-            allQuestionIds.push(question.identifier);
-        });
-        questionMeta = await getQuestions(allQuestionIds);
-        res.json(questionMeta);
-    } catch (error) {
-        console.log(error);
-        if (error.error) {
-            res.status(404).json(error.error);
-        } else {
-            res.status(404).json("unhandled erro");
-        }
-    }
-});
 
 //
 //  Classroom APIs - End
@@ -338,9 +337,9 @@ function postTelemetryEvents(events, cb) {
     request1(options, cb);
 }
 
-app.post("/telemetry", function(req, res) {
+app.post("/telemetry", function (req, res) {
 
-    postTelemetryEvents(req.body, function(error, response, body) {
+    postTelemetryEvents(req.body, function (error, response, body) {
         if (error) console.log(error);
         console.log(body);
         res.status(200).send(body);
@@ -349,6 +348,6 @@ app.post("/telemetry", function(req, res) {
 
 var port = process.env.PORT || 3000;
 
-http.listen(port, function() {
+http.listen(port, function () {
     console.log("listening in http://localhost:" + port);
 });

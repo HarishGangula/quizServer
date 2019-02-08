@@ -1,9 +1,9 @@
 angular
   .module("quizApp", ["ngSanitize"])
-  .controller("quizAppController", function($interval, $timeout, $scope) {
+  .controller("quizAppController", function ($interval, $timeout, $scope) {
     var quizController = this;
     var totalQuestions = 10;
-    var questionTime = 5;
+    var questionTime = 2;
     $scope.results = [];
     quizController.currentIndex = 0;
     quizController.startQuizFlag = true;
@@ -11,7 +11,7 @@ angular
     quizController.showQuestion = false;
     quizController.showDashboard = false;
 
-    quizController.timer = 5;
+    quizController.timer = 10;
     quizController.timerStyle = {
       "font-size": "200px",
       color: getRandomColor()
@@ -26,10 +26,10 @@ angular
       return color;
     }
 
-    quizController.start = function() {
+    quizController.start = function () {
       quizController.startQuizFlag = false;
       quizController.startQuizTimer = true;
-      var timerInterval = $interval(function() {
+      var timerInterval = $interval(function () {
         quizController.timer--;
         var color = getRandomColor();
         quizController.timerStyle = { "font-size": "200px", color: color };
@@ -44,7 +44,7 @@ angular
       }, 1000);
     };
 
-    quizController.startQuizCall = function() {
+    quizController.startQuizCall = function () {
       $scope.results = [];
       quizController.startQuizTimer = false;
       quizController.showDashboard = false;
@@ -58,13 +58,13 @@ angular
           "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
         }
       };
-      $.ajax(settings).done(function(response) {
+      $.ajax(settings).done(function (response) {
         quizController.currentIndex = 0;
         quizController.loadQuestion(quizController.currentIndex);
       });
     };
 
-    socket.on("question", function(data) {
+    socket.on("question", function (data) {
       console.log(data);
       quizController.showQuestion = true;
       var question = _.get(
@@ -82,7 +82,7 @@ angular
       quizController.startQuestionTimer();
     });
 
-    quizController.loadQuestion = function() {
+    quizController.loadQuestion = function () {
       if (quizController.currentIndex <= totalQuestions - 1) {
         var settings = {
           async: true,
@@ -95,7 +95,7 @@ angular
           }
         };
 
-        $.ajax(settings).done(function(response) {
+        $.ajax(settings).done(function (response) {
           console.log(response);
         });
       } else {
@@ -109,7 +109,7 @@ angular
             "Postman-Token": "db5c7de3-b651-4c92-9d3e-5483bf07af55"
           }
         };
-        $.ajax(settings).done(function(response) {
+        $.ajax(settings).done(function (response) {
           $scope.results = response.results;
           $scope.sendPerformance(response.results);
           $scope.$apply();
@@ -119,9 +119,9 @@ angular
       }
     };
 
-    quizController.startQuestionTimer = function() {
+    quizController.startQuestionTimer = function () {
       quizController.quizQuestionTime = questionTime;
-      var timerInterval = $interval(function() {
+      var timerInterval = $interval(function () {
         quizController.quizQuestionTime = quizController.quizQuestionTime - 1;
         if (quizController.quizQuestionTime === 0) {
           $interval.cancel(timerInterval);
@@ -132,9 +132,9 @@ angular
       }, 1000);
     };
 
-    $scope.sendPerformance = function(results) {
+    $scope.sendPerformance = function (results) {
       var events = [];
-      _.forEach(results, function(r) {
+      _.forEach(results, function (r) {
         var event = {
           eid: "DC_PERFORMANCE",
           ets: new Date().getTime(),
@@ -168,7 +168,7 @@ angular
         data: JSON.stringify(telemetryData),
         dataType: "json",
         contentType: "application/json"
-      }).done(function(data) {
+      }).done(function (data) {
         console.log(data);
       });
     };
