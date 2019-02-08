@@ -84,7 +84,7 @@ const endQuiz = function() {
         return (r.rank = i++);
     });
     io.emit("results", { results: results });
-    console.log(results);
+    console.log(JSON.stringify(results));
     quizStatus = "ENDED";
     return results;
 }
@@ -100,7 +100,7 @@ const getContentQuestions = async contentId => {
         allQuestions = await request(options);
         const allQuestionIds = [];
         if(allQuestions.result && allQuestions.result.content) {
-            quizContext.topics = [allQuestions.result.content.topic];
+            quizContext.topics = [allQuestions.result.content.topics];
             allQuestions.result.content.questions.forEach(question => {
                 allQuestionIds.push(question.identifier);
             });
@@ -142,7 +142,6 @@ const loopQuestions = function() {
 
 const quizResponse = function(response) {
 
-    console.log('response', response);
     var context = JSON.parse(JSON.stringify(quizContext));
     context.visitorId = response.user.code;
     context.visitorName = response.user.name;
@@ -159,7 +158,7 @@ const quizResponse = function(response) {
             value: (response.option.isCorrect ? 100 : 0)
         }
     }, function(error, response, body) {
-        if (error) console.log(error);
+        if(error) console.log(error);
     });
 }
 
@@ -401,7 +400,7 @@ app.use("/get/:id", async (req, res) => {
 //
 
 function postTelemetryEvent(event, cb) {
-    console.log('event', event);
+    console.log('event', JSON.stringify(event));
     postTelemetryEvents([event], cb);
 }
 
