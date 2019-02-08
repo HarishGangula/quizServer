@@ -7,6 +7,7 @@ let _ = require("lodash");
 let fs = require("fs");
 var bodyParser = require("body-parser");
 var request1 = require("request");
+var faker = require("faker");
 
 var questions;
 var responses = [];
@@ -32,7 +33,7 @@ io.on("disconnect", function() {
 });
 
 app.get("/startQuiz/:contentId", (req, res) => {
-    console.log('Start Quiz command received with content - ' + req.params.contentId);
+    console.log('Start Quiz command received with content - ' + req.params.contentId, faker.name.findName(), faker.random.alphaNumeric());
     responses = [];
     questions = JSON.parse(fs.readFileSync("questions.json", "utf-8"));
     joel = _.find(questions, { identifier: "do_112682561142702080162" });
