@@ -8,11 +8,28 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="./semantic/semantic.min.css" />
     <style type="text/css">
-    iframe {
+    /*iframe {
         border: 1px solid #ddd;
         height: 100vh;
         width: 78vw;
         margin-left: 10vw;
+    }*/
+    .ifrmae-container{
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+    }
+
+    .ifrmae-container iframe{
+       border: none;
+       height: 100%;
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
     }
     </style>
 </head>
@@ -22,7 +39,7 @@
         <div ng-hide="quizStarted" style="height: 100vh;">
             <img src="please_wait.jpg" alt="" style="display: block;width: 50%;margin: auto;" />
         </div>
-        <div ng-show="quizStarted">
+        <div class="ifrmae-container" ng-show="quizStarted">
             <iframe id="previewContentIframe"></iframe>
         </div>
     </div>
@@ -38,6 +55,9 @@
 <script src="uuid.min.js"></script>
 <script src="faker.js"></script>
 <script>
+$(document).ready(function() {
+    
+});
 angular.module("playerApp", ["ngSanitize"])
     .controller("playerAppController", function(
         $interval,
